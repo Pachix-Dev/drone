@@ -54,9 +54,13 @@ import { TextReveal } from './ui/text-reveal.tsx'
     </div>
 
     <div class='mt-5 md:mt-28 grid md:grid-cols-2 gap-3'>
-      <BlurFade delay={1} inView direction={'right'} client:only>
-        <div class='border-r-2 border-slate-950 border-dotted ps-5 md:ps-20'>
-          <p class='text-black md:text-white text-3xl'>Perfil del EXPOSITOR</p>
+      <BlurFade delay={0.5} inView direction={'right'} client:only>
+        <div
+          class='border-r-2 border-slate-950 border-dotted ps-5 md:ps-20 h-full text-xl'
+        >
+          <p class='text-black md:text-white text-3xl font-bold'>
+            Perfil del <br />EXPOSITOR
+          </p>
           <p class='mt-10 flex gap-2'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -229,7 +233,7 @@ import { TextReveal } from './ui/text-reveal.tsx'
           </p>
         </div>
       </BlurFade>
-      <BlurFade delay={1} inView direction={'up'} client:only>
+      <BlurFade delay={0.5} inView direction={'up'} client:only>
         <div
           class='relative grid place-items-center text-white px-20 2xl:px-52 -rotate-12'
         >
