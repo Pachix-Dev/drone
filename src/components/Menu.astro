@@ -1,0 +1,229 @@
+---
+import {
+  Astronav,
+  MenuItems,
+  MenuIcon,
+  Dropdown,
+  DropdownItems,
+  DropdownSubmenu,
+  StickyHeader,
+} from 'astro-navbar'
+import i18next, { t } from 'i18next'
+import { LanguageSelector } from 'astro-i18next/components'
+
+const lang = i18next.language
+const base = i18next.language === 'es' ? '' : `/${lang}`
+
+interface MenuItem {
+  title: string
+  href?: string
+  target?: string
+  items?: MenuItem[]
+}
+
+const menu: MenuItem[] = [
+  {
+    title: t('menu.about_us'),
+    href: '/#',
+  },
+  {
+    title: t('menu.categories'),
+    href: '/#category',
+  },
+  {
+    title: t('menu.exhibitors'),
+    href: '/#',
+  },
+  {
+    title: t('menu.visitors'),
+    href: '/#',
+  },
+  {
+    title: t('menu.register'),
+    href: '/#',
+  },
+]
+---
+
+<StickyHeader
+  class='sticky top-0 z-[200] lg:flex justify-between items-center p-5 gap-5 w-full text-white font-bold menuSecondary'
+>
+  <Astronav closeOnClick>
+    <div class='flex w-full lg:w-auto justify-between items-center'>
+      <a href={`${base}/`}>
+        <img
+          src='/img/droneslogo.webp'
+          alt='Industrial Transformation Mexico'
+          class='w-48 animate-fade-right animate-infinite'
+        />
+      </a>
+      <div class='block lg:hidden'>
+        <MenuIcon class='w-6 h-6 text-white' />
+      </div>
+    </div>
+    <MenuItems class='hidden lg:flex'>
+      <ul class='flex flex-col items-center lg:flex-row gap-5 uppercase'>
+        {
+          menu.map((menuItem) => (
+            <li>
+              {menuItem.items ? (
+                <Dropdown class='group'>
+                  <button class='flex items-center uppercase'>
+                    <span>{menuItem.title}</span>
+                  </button>
+                  <DropdownItems class='relative'>
+                    <div class='lg:absolute bg-black top-2 border shadow rounded p-2 w-max'>
+                      <ul>
+                        {menuItem.items.map((subItem) => (
+                          <li class='p-2'>
+                            {subItem.items ? (
+                              <DropdownSubmenu class='group/submenu'>
+                                <button class='flex w-full items-center justify-between uppercase'>
+                                  <span>{subItem.title}</span>
+                                  <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    fill='none'
+                                    viewBox='0 0 24 24'
+                                    stroke-width='3'
+                                    stroke='currentColor'
+                                    class='w-3 h-3 mt-0.5 group-open/submenu:rotate-180'
+                                  >
+                                    <path
+                                      stroke-linecap='round'
+                                      stroke-linejoin='round'
+                                      d='M8.25 4.5l7.5 7.5-7.5 7.5'
+                                    />
+                                  </svg>
+                                </button>
+                                <DropdownItems class='relative'>
+                                  <ul class='lg:absolute bg-black top-0 left-full w-40 border shadow rounded p-2 '>
+                                    {subItem.items.map((nestedSubItem) => (
+                                      <li class='p-2'>
+                                        {nestedSubItem.items ? (
+                                          <DropdownSubmenu class='group/nestedsubmenu'>
+                                            <button class='flex w-full items-center justify-between uppercase'>
+                                              <span>{nestedSubItem.title}</span>
+                                              <svg
+                                                xmlns='http://www.w3.org/2000/svg'
+                                                fill='none'
+                                                viewBox='0 0 24 24'
+                                                stroke-width='3'
+                                                stroke='currentColor'
+                                                class='w-3 h-3 mt-0.5 group-open/nestedsubmenu:rotate-180'
+                                              >
+                                                <path
+                                                  stroke-linecap='round'
+                                                  stroke-linejoin='round'
+                                                  d='M8.25 4.5l7.5 7.5-7.5 7.5'
+                                                />
+                                              </svg>
+                                            </button>
+                                            <DropdownItems class='relative'>
+                                              <ul class='lg:absolute bg-white top-0 left-full w-40 border shadow rounded p-2'>
+                                                {nestedSubItem.items.map(
+                                                  (deepSubItem) => (
+                                                    <li>
+                                                      <a
+                                                        href={
+                                                          deepSubItem?.target
+                                                            ? deepSubItem.href
+                                                            : `${base}${deepSubItem.href}`
+                                                        }
+                                                        {...(deepSubItem.target && {
+                                                          target:
+                                                            deepSubItem.target,
+                                                        })}
+                                                      >
+                                                        {deepSubItem.title}
+                                                      </a>
+                                                    </li>
+                                                  )
+                                                )}
+                                              </ul>
+                                            </DropdownItems>
+                                          </DropdownSubmenu>
+                                        ) : (
+                                          <a
+                                            href={
+                                              nestedSubItem?.target
+                                                ? nestedSubItem.href
+                                                : `${base}${nestedSubItem.href}`
+                                            }
+                                            {...(nestedSubItem.target && {
+                                              target: nestedSubItem.target,
+                                            })}
+                                          >
+                                            {nestedSubItem.title}
+                                          </a>
+                                        )}
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </DropdownItems>
+                              </DropdownSubmenu>
+                            ) : (
+                              <a
+                                href={
+                                  subItem?.target
+                                    ? subItem.href
+                                    : `${base}${subItem.href}`
+                                }
+                                {...(subItem.target && {
+                                  target: subItem.target,
+                                })}
+                              >
+                                {subItem.title}
+                              </a>
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </DropdownItems>
+                </Dropdown>
+              ) : (
+                <a
+                  href={
+                    menuItem?.target ? menuItem.href : `${base}${menuItem.href}`
+                  }
+                  {...(menuItem.target && {
+                    target: menuItem.target,
+                  })}
+                >
+                  {menuItem.title}
+                </a>
+              )}
+            </li>
+          ))
+        }
+        <li class='flex items-center md:order-2 button-language'>
+          {
+            i18next.language === 'en' ? (
+              <img
+                src='/img/flag-us.svg'
+                alt='us flag'
+                class='h-6 w-6 rounded-full mr-2'
+              />
+            ) : (
+              <img
+                src='/img/flag-mexico.svg'
+                alt='México flag'
+                class='h-6 w-6 rounded-full mr-2'
+              />
+            )
+          }
+          <LanguageSelector
+            showFlag={true}
+            aria-label='Select language'
+            class='block w-full p-2.5 rounded-lg bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500'
+          />
+        </li>
+      </ul>
+    </MenuItems>
+  </Astronav>
+</StickyHeader>
+<style>
+  .menuSecondary {
+    background-color: #1e2023 !important;
+  }
+</style>

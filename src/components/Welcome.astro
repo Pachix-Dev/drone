@@ -1,12 +1,291 @@
 ---
+import { BlurFade } from './ui/blur-fade'
 import { TextReveal } from './ui/text-reveal.tsx'
 ---
 
-<section class='bg-[#1e2023] relative'>
+<section class='bg-[#1e2023]'>
   <TextReveal text='BEYOND THE SKIES, BEYOND LIMITS.' client:only />
-  <img
-    src='/img/elises.webp'
-    alt="Elise's logo"
-    class='mt-[-2rem] w-92 md:w-5/12'
-  />
+  <div
+    class='relative bg-[url("/img/bg_drone2.webp")] bg-center bg-cover bg-no-repeat md:h-[80rem] overflow-hidden'
+  >
+    <div class='bg-gradient-to-b from-[#1E2023] to-transparent w-full h-80'>
+    </div>
+    <div class='mt-[-2rem] w-92 md:w-5/12 md:absolute top-0 left-0 z-20'>
+      <BlurFade delay={0.5} inView direction={'right'} client:only>
+        <img src='/img/elises.webp' alt="Elise's logo" class='w-full' />
+      </BlurFade>
+    </div>
+    <div
+      class='grid lg:grid-cols-2 place-content-center place-items-center text-white p-5'
+    >
+      <div></div>
+      <BlurFade delay={1} inView direction={'left'} client:only>
+        <div class='grid gap-5 md:flex'>
+          <div class='grid place-items-center text-center'>
+            <img src='/img/icono1.webp' alt='Rocket' class='w-20 md:w-32' />
+            <p>
+              <strong>30 expositores</strong>
+              nacionales e internacionales
+            </p>
+          </div>
+          <div class='grid place-items-center text-center'>
+            <img src='/img/icono2.webp' alt='Rocket' class='w-20 md:w-32' />
+            <p>
+              <strong>30 expositores</strong>
+              nacionales e internacionales
+            </p>
+          </div>
+          <div class='grid place-items-center text-center'>
+            <img src='/img/icono3.webp' alt='Rocket' class='w-20 md:w-32' />
+            <p>
+              <strong>30 expositores</strong>
+              nacionales e internacionales
+            </p>
+          </div>
+          <div class='grid place-items-center text-center'>
+            <img src='/img/icono4.webp' alt='Rocket' class='w-20 md:w-32' />
+            <p>
+              <strong>30 expositores</strong>
+              nacionales e internacionales
+            </p>
+          </div>
+        </div>
+      </BlurFade>
+    </div>
+
+    <div class='mt-5 md:mt-28 grid md:grid-cols-2 gap-3'>
+      <BlurFade delay={1} inView direction={'right'} client:only>
+        <div class='border-r-2 border-slate-950 border-dotted ps-5 md:ps-20'>
+          <p class='text-black md:text-white text-3xl'>Perfil del EXPOSITOR</p>
+          <p class='mt-10 flex gap-2'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke-width='1.5'
+              stroke='currentColor'
+              class='size-6'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
+              ></path>
+            </svg>
+            Fabricantes e importadores de drones
+          </p>
+          <p class='flex gap-2'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke-width='1.5'
+              stroke='currentColor'
+              class='size-6'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
+              ></path>
+            </svg>
+            Tecnología embebida
+          </p>
+          <p class='flex gap-2'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke-width='1.5'
+              stroke='currentColor'
+              class='size-6'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
+              ></path>
+            </svg>
+            Robótica
+          </p>
+          <p class='flex gap-2'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke-width='1.5'
+              stroke='currentColor'
+              class='size-6'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
+              ></path>
+            </svg>
+            Sistemas autónomos
+          </p>
+          <p class='flex gap-2'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke-width='1.5'
+              stroke='currentColor'
+              class='size-6'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
+              ></path>
+            </svg>
+            Equipos relacionados
+          </p>
+          <p class='flex gap-2'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke-width='1.5'
+              stroke='currentColor'
+              class='size-6'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
+              ></path>
+            </svg>
+            Plataformas de procesamiento de datos
+          </p>
+          <p class='flex gap-2'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke-width='1.5'
+              stroke='currentColor'
+              class='size-6'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
+              ></path>
+            </svg>
+            Proveedores de servicios
+          </p>
+          <p class='flex gap-2'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke-width='1.5'
+              stroke='currentColor'
+              class='size-6'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
+              ></path>
+            </svg>
+            Entes reguladores
+          </p>
+          <p class='flex gap-2'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke-width='1.5'
+              stroke='currentColor'
+              class='size-6'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
+              ></path>
+            </svg>
+            Universidades
+          </p>
+          <p class='flex gap-2'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke-width='1.5'
+              stroke='currentColor'
+              class='size-6'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
+              ></path>
+            </svg>
+            Startups
+          </p>
+        </div>
+      </BlurFade>
+      <BlurFade delay={1} inView direction={'up'} client:only>
+        <div
+          class='relative grid place-items-center text-white px-20 2xl:px-52 -rotate-12'
+        >
+          <img
+            src='/img/iphone.webp'
+            alt='perfil visitante'
+            class='w-full relative z-0'
+          />
+          <div class='absolute top-1/4 z-10 ps-3 text-xs'>
+            <div
+              class='flex gap-2 items-center mx-auto bg-[#0c3138] rounded-md p-2 font-bold w-fit'
+            >
+              VISITANTE <svg
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke-width='1.5'
+                stroke='currentColor'
+                class='size-6 rotate-90 text-green-700'
+              >
+                <path
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  d='M8.288 15.038a5.25 5.25 0 0 1 7.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 0 1 1.06 0Z'
+                ></path>
+              </svg>
+            </div>
+            <div class='mt-5 grid lg:grid-cols-2 gap-5 lg:text-lg'>
+              <ul class='list-disc'>
+                <li>Agricultura</li>
+                <li>Media Ambiente</li>
+                <li>Gobiernos de cuidades</li>
+                <li>Infraestructura</li>
+                <li>Movilidad</li>
+                <li>Forestal</li>
+                <li>Construcción</li>
+                <li>Seguridad</li>
+              </ul>
+              <ul class='list-disc'>
+                <li>Minería</li>
+                <li>Gas y Petróleo</li>
+                <li>Energía</li>
+                <li>Defensa</li>
+                <li>Telecomunicaciones</li>
+                <li>Saneamiento y Obra</li>
+                <li>Pública</li>
+                <li>Universidades</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </BlurFade>
+    </div>
+  </div>
 </section>
+<div
+  class='-mt-32 bg-gradient-to-t from-[#ffff] to-transparent w-full h-32 relative z-30'
+>
+</div>

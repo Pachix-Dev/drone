@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    darkMode: ["class"],
+	darkMode: ["class"],
     content: ["./src/**/*.{astro,html,js,jsx,ts,tsx}"], // Ensure Astro files are included
   theme: {
   	extend: {
