@@ -6,7 +6,7 @@ export function Suscribe() {
 
   const urlbase = import.meta.env.DEV
     ? 'http://localhost:3010/'
-    : 'https://re-plus-mexico.com.mx/server/'
+    : 'https://drone.igeco.mx/server/'
 
   const handleSubmit = async (event) => {
     event.preventDefault()
