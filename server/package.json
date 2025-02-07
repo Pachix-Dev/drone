@@ -1,0 +1,23 @@
+{
+  "name": "drone-server",
+  "version": "1.0.0",
+  "description": "api para evento drones cdmx 2025",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file .env --watch app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fabian Yapura Claros",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql2": "^3.12.0",
+    "pdfkit": "^0.16.0",
+    "qrcode": "^1.5.4",
+    "resend": "^4.1.2",
+    "uuid": "^11.0.5"
+  }
+}

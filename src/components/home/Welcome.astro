@@ -1,6 +1,6 @@
 ---
-import { BlurFade } from './ui/blur-fade'
-import { TextReveal } from './ui/text-reveal.tsx'
+import { BlurFade } from '../ui/blur-fade'
+import { TextReveal } from '../ui/text-reveal.tsx'
 ---
 
 <section class='bg-[#1e2023]'>
@@ -21,32 +21,32 @@ import { TextReveal } from './ui/text-reveal.tsx'
       <div></div>
       <BlurFade delay={0.5} inView direction={'left'} client:only>
         <div class='grid gap-5 md:flex'>
-          <div class='grid place-items-center text-center'>
+          <div class='grid place-items-center gap-2 text-center'>
             <img src='/img/icono1.webp' alt='Rocket' class='w-20 md:w-32' />
             <p>
-              <strong>30 expositores</strong>
+              <strong>30 expositores</strong><br />
               nacionales e internacionales
             </p>
           </div>
-          <div class='grid place-items-center text-center'>
+          <div class='grid place-items-center gap-2 text-center'>
             <img src='/img/icono2.webp' alt='Rocket' class='w-20 md:w-32' />
             <p>
-              <strong>30 expositores</strong>
-              nacionales e internacionales
+              <strong>Carrera</strong><br />
+              demostración y presentación
             </p>
           </div>
-          <div class='grid place-items-center text-center'>
+          <div class='grid place-items-center gap-2 text-center'>
             <img src='/img/icono3.webp' alt='Rocket' class='w-20 md:w-32' />
             <p>
-              <strong>30 expositores</strong>
-              nacionales e internacionales
+              <strong>Conferencias</strong><br />
+              especializadas 2 días
             </p>
           </div>
-          <div class='grid place-items-center text-center'>
+          <div class='grid place-items-center gap-2 text-center'>
             <img src='/img/icono4.webp' alt='Rocket' class='w-20 md:w-32' />
             <p>
-              <strong>30 expositores</strong>
-              nacionales e internacionales
+              <strong>+2,000 visitante</strong><br />
+              profesionales
             </p>
           </div>
         </div>
