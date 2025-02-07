@@ -18,7 +18,7 @@ export function ContactForm({ currentLanguage }) {
 
   const urlbase = import.meta.env.DEV
     ? 'http://localhost:3010/'
-    : 'https://https://drone.igeco.mx/server/'
+    : 'https://drone.igeco.mx/server/'
 
   const handleSubmit = async (event) => {
     event.preventDefault()
