@@ -1,5 +1,5 @@
 ---
-import { changeLanguage } from "i18next";
+import i18next, { changeLanguage } from "i18next";
 import LayoutLanding from "@/layouts/LayoutLanding.astro";
 import HeroLanding from "@/components/landing/HeroLanding.astro";
 import DescriptionEvent from "@/components/shared/DescriptionEvent.astro";
@@ -11,5 +11,5 @@ changeLanguage("es");
 <LayoutLanding>
   <HeroLanding />
   <DescriptionEvent />
-  <ContactForm client:only />
+  <ContactForm currentLanguage={i18next.language} client:only />
 </LayoutLanding>

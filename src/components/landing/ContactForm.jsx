@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { countrycodes } from '../../lib/countrycodes.js'
 
-export function ContactForm() {
+export function ContactForm({ currentLanguage }) {
   const [selectedCountryCode, setSelectedCountryCode] = useState('')
   const [phoneNumber, setPhoneNumber] = useState('')
 
@@ -35,7 +35,14 @@ export function ContactForm() {
       setSendStatus(true)
       const res = await fetch(urlbase + 'exhibitor-lead', requestOptions)
       const data = await res.json()
-      console.log(data)
+      if (data?.status) {
+        setResponse(
+          '¡Gracias! Tu información ha sido enviada con éxito. Nos pondremos en contacto contigo lo antes posible.'
+        )
+        currentLanguage === 'es'
+          ? (window.location.href = '/gracias-por-registrarte')
+          : (window.location.href = '/en/gracias-por-registrarte')
+      }
     } catch (error) {
       console.log(error)
       setSendStatus(false)

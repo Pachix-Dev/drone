@@ -1,4 +1,15 @@
-<footer class='mx-4 py-5'>
+---
+import { Suscribe } from '../shared/Suscribe.jsx'
+---
+
+<footer class='container mx-auto py-5'>
+  <div class='border-y-2 border-black py-5 m-4'>
+    <img
+      src='/img/logosfooter.webp'
+      alt='logo'
+      class='w-full md:w-2/4 mx-auto'
+    />
+  </div>
   <div
     class='grid place-content-center md:flex gap-5 md:justify-between items-center border-b-2 border-black py-5'
   >
@@ -15,27 +26,7 @@
       </diV>
     </div>
 
-    <form class='grid gap-3'>
-      <div class='grid'>
-        <strong>Nombre</strong>
-        <input
-          type='text'
-          placeholder='Nombre'
-          class='border-2 rounded-lg p-2'
-        />
-      </div>
-      <div class='grid'>
-        <strong>Correo electrónico</strong>
-        <input
-          type='email'
-          placeholder='Correo'
-          class='border-2 rounded-lg p-2'
-        />
-      </div>
-      <button class='bg-[#0c3138] text-white rounded-lg p-2'
-        >SUSCRIBIRSE AL BOLETIN</button
-      >
-    </form>
+    <Suscribe client:only />
   </div>
   <p class='font-bold text-center md:text-left'>
     ITALIAN GERMAN EXHIBITION COMPANY

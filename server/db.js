@@ -68,7 +68,7 @@ export class RegisterModel {
         const connection = await mysql.createConnection(config)
         try {      
           const [result] = await connection.query(
-            'INSERT INTO suscritor ( name, email ) VALUES (?,?)',
+            'INSERT INTO suscriptor_drone ( name, email ) VALUES (?,?)',
             [                      
               name,              
               email,             

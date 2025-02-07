@@ -60,6 +60,31 @@ app.post('/exhibitor-lead', async (req, res) => {
     }
 })
 
+app.post('/suscribe', async (req, res) => {
+  const { formData } = req.body
+ 
+  try{
+      const response = await RegisterModel.create_suscriber({ ...formData })
+       if(!response.status){
+          return  res.status(500).send({
+              ...response
+          });
+      }                 
+        
+      return res.send({            
+          status: true,
+          message: 'Tu suscripción ha sido procesada correctamente, en breve recibirás información de nuestros eventos...',
+      });   
+  }
+  catch (error) {
+      console.log(error)
+      res.json({
+          status: false,
+          message: 'Error al procesar datos, por favor intenta de nuevo.',
+      })
+  }
+})
+
 app.use(express.static('public'));
 
 app.get('/generate-pdf', async (req, res) => {
@@ -275,7 +300,7 @@ app.get('/template-email', async (req, res) => {
 });
 
 /* EMAIL DRONE */
-async function sendEmail(formData){    
+async function sendEmail(formData){
     try{
         const content = await email_template({ formData });        
         await resend.emails.send({

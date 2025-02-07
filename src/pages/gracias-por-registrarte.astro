@@ -1,0 +1,58 @@
+---
+import { changeLanguage } from "i18next";
+import LayoutLanding from "../layouts/LayoutLanding.astro";
+import Confettti from "../components/shared/Confetti.jsx";
+
+changeLanguage("es");
+---
+
+<LayoutLanding title='ITM  | Gracias por contactarnos'>
+  <div class='h-screen p-5 lg:p-20 bg-[#1E2023]'>
+    <div
+      class='rounded-lg px-4 ecomondo-bloq-1 w-full h-full shadow-2xl text-white flex flex-col items-center justify-center relative'
+    >
+      <Confettti client:visible />
+      <div class='box lg:text-6xl text-5xl' id='box1'>
+        Gracias por contactarnos
+      </div>
+      <img
+        class='my-10'
+        width='300'
+        src='/img/droneslogo.webp'
+        alt='DRONE INNOVATOR FORUMMX'
+      />
+      <p class='font-bold text-center'>
+        ¡Fantástico! Su solicitud fue enviada correctamente.
+      </p>
+      <p class='text-center'>
+        ¡Pronto uno de nuestro agentes se pondrá en contacto contigo!
+      </p>
+      <a
+        href='/'
+        class='mt-10 text-white px-4 py-2 rounded-md font-bold bg-[#5E8CC1] hover:bg-[#1c416c] transition duration-300 ease-in-out'
+      >
+        Regresar al inicio
+      </a>
+    </div>
+  </div>
+</LayoutLanding>
+<style>
+  .box {
+    color: white;
+    font-weight: 800;
+    animation: aniload 3s;
+  }
+
+  #box1::after {
+    content: 'Gracias por contactarnos';
+    display: flex;
+    transform: rotateX(180deg);
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 10%,
+      rgba(255, 255, 255, 0.5)
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+</style>
