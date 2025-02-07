@@ -27,7 +27,10 @@ export class RegisterModel {
 
     static async create_lead ({               
         name,        
-        email,      
+        email,
+        phone,
+        message,
+        category    
     }) 
     {
         const connection = await mysql.createConnection(config)
@@ -43,17 +46,17 @@ export class RegisterModel {
             ]
         )
                                 
-        return {
-            status: true,
-            insertId: result.insertId,
-            ...result,
-        }
+          return {
+              status: true,
+              insertId: result.insertId,
+              ...result,
+          }
         }catch (error) {
-        console.log(error)
-        return hableError(error)          
+          console.log(error)
+          return hableError(error)          
         }
         finally {
-        await connection.end()
+          await connection.end()
         }
     }
     

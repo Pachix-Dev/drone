@@ -2,6 +2,7 @@ import express from 'express';
 import 'dotenv/config';
 import cors from 'cors';
 import pkg from 'body-parser';
+import {email_template} from './emailTemplate.js';
 
 import {RegisterModel} from './db.js';
 
@@ -35,17 +36,26 @@ const resend = new Resend(process.env.RESEND_APIKEY)
 
 app.post('/exhibitor-lead', async (req, res) => {
     const { formData } = req.body
-    const { name, email } = formData
+   
 
     try{
-        const response = await RegisterModel.create_suscriber({ name, email })
-        res.json(response)
+        const response = await RegisterModel.create_lead({ ...formData })
+         if(!response.status){
+            return  res.status(500).send({
+                ...response
+            });
+        }                 
+        const mailResponse = await sendEmail(formData);   
+
+        return res.send({            
+            ...mailResponse,
+        });   
     }
     catch (error) {
         console.log(error)
         res.json({
             status: false,
-            message: 'Error al guardar tus datos, por favor intenta de nuevo.',
+            message: 'Error al procesar datos, por favor intenta de nuevo.',
         })
     }
 })
@@ -264,38 +274,27 @@ app.get('/template-email', async (req, res) => {
     res.send(emailContent);
 });
 
-/* EMAIL RE+ MEXICO */
-async function sendEmail(data, pdfAtch = null, paypal_id_transaction = null){    
+/* EMAIL DRONE */
+async function sendEmail(formData){    
     try{
-       
-        
-        const emailContent = data.currentLanguage === 'es' ?  await email_template({ ...data }) : await email_template_eng({ ...data });
-       
+        const content = await email_template({ formData });        
         await resend.emails.send({
-            from: 'RE+ MEXICO 2025 <noreply@re-plus-mexico.com.mx>',
-            to: data.email,
-            subject: 'Confirmación de pre registro RE+ MEXICO 2025',
-            html: emailContent,
-            attachments: [
-                {
-                    filename: `${paypal_id_transaction}.pdf`,
-                    path: `https://re-plus-mexico.com.mx/invoices/${paypal_id_transaction}.pdf`,
-                    content_type: 'application/pdf'
-                },
-              ],           
+            from: 'Nuevo Lead Drone 2025 <noreply@igeco.mx>',
+            to: 'azul.ogazon@igeco.mx',
+            subject: 'un nuevo contacto te ha enviado un mensaje',
+            html: content                     
         })
         
-
         return {
             status: true,
-            message: 'Gracias por registrarte, te hemos enviado un correo de confirmación a tu bandeja de entrada...'
+            message: 'Tu solicitud a sido procesada correctamente, en breve nos pondremos en contacto contigo...'
         };
 
     } catch (err) {
         console.log(err);
         return {
             status: false,
-            message: 'No pudimos enviarte el correo de confirmación de tu registro, por favor descarga tu registro en este pagina y presentalo hasta el dia del evento...'
+            message: 'No pudimos procesar tu solicitud, por favor intenta de nuevo...'
         };              
     }    
 }

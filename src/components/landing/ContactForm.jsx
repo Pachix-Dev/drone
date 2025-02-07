@@ -35,6 +35,7 @@ export function ContactForm() {
       setSendStatus(true)
       const res = await fetch(urlbase + 'exhibitor-lead', requestOptions)
       const data = await res.json()
+      console.log(data)
     } catch (error) {
       console.log(error)
       setSendStatus(false)
@@ -59,14 +60,14 @@ export function ContactForm() {
       >
         <div>
           <label
-            htmlFor='sector'
-            className='block mb-2 text-sm font-medium text-white'
+            htmlFor='category'
+            className='block mb-2 text-sm font-medium text-black'
           >
-            Sector
+            Category
           </label>
           <select
-            id='sector'
-            name='sector'
+            id='category'
+            name='category'
             className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'
             required
           >
@@ -99,7 +100,7 @@ export function ContactForm() {
         <div>
           <label
             htmlFor='name'
-            className='block mb-2 text-sm font-medium text-white'
+            className='block mb-2 text-sm font-medium text-black'
           >
             Nombre
           </label>
@@ -116,7 +117,7 @@ export function ContactForm() {
         <div>
           <label
             htmlFor='email'
-            className='block mb-2 text-sm font-medium text-white'
+            className='block mb-2 text-sm font-medium text-black'
           >
             Email
           </label>
@@ -133,7 +134,7 @@ export function ContactForm() {
         <div>
           <label
             htmlFor='countrycodes'
-            className='block mb-2 text-sm font-medium text-white'
+            className='block mb-2 text-sm font-medium text-black'
           >
             Codigo de país + número de teléfono
           </label>
@@ -175,7 +176,7 @@ export function ContactForm() {
         <div className='sm:col-span-2'>
           <label
             htmlFor='message'
-            className='block mb-2 text-sm font-medium text-white'
+            className='block mb-2 text-sm font-medium text-black'
           >
             Mensaje
           </label>
@@ -223,7 +224,7 @@ export function ContactForm() {
                 Enviar
               </button>
             ) : (
-              <span className='text-white font-bold rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 mt-10 text-center'>
+              <span className='text-black font-bold rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 mt-10 text-center'>
                 {response}
               </span>
             )}
