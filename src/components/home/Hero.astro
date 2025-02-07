@@ -3,50 +3,50 @@ import { FlipText } from '../ui/flip-text'
 ---
 
 <section
-  class="bg-[url('/img/bg_drone.webp')] bg-center lg:bg-[center_top_-10rem] bg-cover bg-no-repeat h-screen grid lg:flex md:flex-row justify-between p-5 lg:p-20"
+  class="bg-[url('/img/bg_drone.webp')] bg-center lg:bg-[center_top_-10rem] bg-cover bg-no-repeat h-screen grid place-items-center lg:place-items-start lg:flex lg:justify-between"
 >
-  <FlipText
-    className='text-md font-extrabold -tracking-widest text-[#1e2023] md:text-3xl md:leading-[5rem]'
-    word=' 17 y 18 DE OCTUBRE 2025'
-    client:only
-  />
+  <div class='p-5'>
+    <FlipText
+      className='text-md font-extrabold -tracking-widest text-[#1e2023] md:text-2xl md:leading-[5rem] '
+      word=' 17 y 18 DE OCTUBRE 2025'
+      client:only
+    />
+  </div>
 
-  <div
-    class='mt-auto ms-auto w-fit p-4 md:p-10 bg-white/20 backdrop-blur-sm rounded-xl'
-  >
+  <div class='mt-auto md:mb-20 ms-auto w-fit pe-5 pb-5'>
     <FlipText
       className='text-md font-bold -tracking-widest text-[#1e2023]  md:leading-[2rem] ms-auto'
       word='SUMMIT & DEMO'
       client:only
     />
     <FlipText
-      className='text-2xl  tracking-widest	 text-[#1e2023] md:text-7xl md:leading-[5rem] '
+      className='text-xl  tracking-widest	 text-[#1e2023] md:text-5xl md:leading-[5rem] '
       word='INNOVATORS'
       client:only
     />
     <FlipText
-      className='text-2xl  tracking-widest	 text-[#1e2023] md:text-7xl md:leading-[5rem] ml-[-2rem]'
+      className='text-xl  tracking-widest	 text-[#1e2023] md:text-5xl md:leading-[5rem] ml-[-2rem]'
       word='FORUM MX'
       client:only
     />
     <FlipText
-      className='text-md tracking-tighter text-[#1e2023] md:text-2xl md:leading-[2rem]'
+      className='text-md tracking-tighter text-[#1e2023] md:text-xl md:leading-[2rem]'
       word='"Liberando el Potencial Aéreo:'
       client:only
     />
     <FlipText
-      className='text-md tracking-tighter	font-bold text-[#1e2023] md:text-2xl md:leading-[2rem] italic'
+      className='text-md tracking-tighter	font-bold text-[#1e2023] md:text-xl md:leading-[2rem] italic'
       word='El Mundo de los Drones"'
       client:only
     />
     <div class='mt-10 grid md:flex'>
       <FlipText
-        className='text-md tracking-tighter	font-bold text-[#1e2023] md:text-2xl md:leading-[2rem] '
+        className='text-md tracking-tighter	font-bold text-[#1e2023] md:text-xl md:leading-[2rem] '
         word='CENTRO ECUESTRE SEDENA, '
         client:only
       />
       <FlipText
-        className='text-md tracking-tighter text-[#1e2023] md:text-2xl md:leading-[2rem] '
+        className='text-md tracking-tighter text-[#1e2023] md:text-xl md:leading-[2rem] '
         word='CIUDAD DE MÉXICO, '
         client:only
       />
