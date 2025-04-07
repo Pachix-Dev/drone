@@ -12,6 +12,54 @@ import '../styles/global.css'
     <link rel='icon' type='image/svg+xml' href='/img/favicondrone.png' />
     <meta name='generator' content={Astro.generator} />
     <title>DRONE INNOVATORS FORUM MX</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=G-41PJEB1QRR'
+    ></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'G-41PJEB1QRR')
+    </script>
+    <!-- Meta Pixel Code -->
+    <script is:inline>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments)
+        }
+        if (!f._fbq) f._fbq = n
+        n.push = n
+        n.loaded = !0
+        n.version = '2.0'
+        n.queue = []
+        t = b.createElement(e)
+        t.async = !0
+        t.src = v
+        s = b.getElementsByTagName(e)[0]
+        s.parentNode.insertBefore(t, s)
+      })(
+        window,
+        document,
+        'script',
+        'https://connect.facebook.net/en_US/fbevents.js'
+      )
+      fbq('init', '1330592598157437')
+      fbq('track', 'PageView')
+    </script>
+    <noscript
+      ><img
+        height='1'
+        width='1'
+        style='display:none'
+        src='https://www.facebook.com/tr?id=1330592598157437&ev=PageView&noscript=1'
+      /></noscript
+    >
+    <!-- End Meta Pixel Code -->
   </head>
   <body>
     <Menu />

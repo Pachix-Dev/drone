@@ -1,9 +1,10 @@
 ---
 import DescriptionEvent from '../shared/DescriptionEvent.astro'
+import { t } from 'i18next'
 ---
 
 <section class='mt-3 relative' id='category'>
-  <p class='text-4xl md:text-9xl font-bold md:-ms-8'>CATEGORÍAS</p>
+  <p class='text-4xl md:text-9xl font-bold md:-ms-8'>{t('home.text_35')}</p>
   <img
     src='/img/linedrone.webp'
     alt='linea'
@@ -13,17 +14,17 @@ import DescriptionEvent from '../shared/DescriptionEvent.astro'
   <div
     class='my-10 flex flex-wrap flex-1 justify-center gap-5 px-4 text-xs md:text-2xl'
   >
-    <span class='border-2 rounded-lg p-2'>Drones</span>
-    <span class='border-2 rounded-lg p-2'>Navegación y posicionamiento</span>
-    <span class='border-2 rounded-lg p-2'>Cartografía</span>
-    <span class='border-2 rounded-lg p-2'>Geoprocesamiento</span>
-    <span class='border-2 rounded-lg p-2'>Inteligencia Artificial</span>
-    <span class='border-2 rounded-lg p-2'>Topografía </span>
-    <span class='border-2 rounded-lg p-2'>Sensores remotos</span>
-    <span class='border-2 rounded-lg p-2'>Monitoreo e inspecciones</span>
-    <span class='border-2 rounded-lg p-2'>Escaneo Láser y Lidar</span>
-    <span class='border-2 rounded-lg p-2'>Soluciones de uso recreativo</span>
-    <span class='border-2 rounded-lg p-2'>Catastro multipropósito</span>
+    <span class='border-2 rounded-lg p-2'>{t('home.text_36')}</span>
+    <span class='border-2 rounded-lg p-2'>{t('home.text_37')}</span>
+    <span class='border-2 rounded-lg p-2'>{t('home.text_38')}</span>
+    <span class='border-2 rounded-lg p-2'>{t('home.text_39')}</span>
+    <span class='border-2 rounded-lg p-2'>{t('home.text_40')}</span>
+    <span class='border-2 rounded-lg p-2'>{t('home.text_41')} </span>
+    <span class='border-2 rounded-lg p-2'>{t('home.text_42')}</span>
+    <span class='border-2 rounded-lg p-2'>{t('home.text_43')}</span>
+    <span class='border-2 rounded-lg p-2'>{t('home.text_44')}</span>
+    <span class='border-2 rounded-lg p-2'>{t('home.text_45')}</span>
+    <span class='border-2 rounded-lg p-2'>{t('home.text_46')}</span>
   </div>
   <DescriptionEvent />
 </section>

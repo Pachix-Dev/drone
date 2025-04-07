@@ -1,6 +1,7 @@
 ---
 import { BlurFade } from '../ui/blur-fade'
 import { TextReveal } from '../ui/text-reveal.tsx'
+import { t } from 'i18next'
 ---
 
 <section class='bg-[#1e2023]'>
@@ -23,31 +24,19 @@ import { TextReveal } from '../ui/text-reveal.tsx'
         <div class='grid gap-5 md:flex'>
           <div class='grid place-items-center gap-2 text-center'>
             <img src='/img/icono1.webp' alt='Rocket' class='w-20 md:w-32' />
-            <p>
-              <strong>30 expositores</strong><br />
-              nacionales e internacionales
-            </p>
+            <p set:html={t('home.text_4')} class='text-center' />
           </div>
           <div class='grid place-items-center gap-2 text-center'>
             <img src='/img/icono2.webp' alt='Rocket' class='w-20 md:w-32' />
-            <p>
-              <strong>Carrera</strong><br />
-              demostración y presentación
-            </p>
+            <p set:html={t('home.text_5')} />
           </div>
           <div class='grid place-items-center gap-2 text-center'>
             <img src='/img/icono3.webp' alt='Rocket' class='w-20 md:w-32' />
-            <p>
-              <strong>Conferencias</strong><br />
-              especializadas 2 días
-            </p>
+            <p set:html={t('home.text_6')} />
           </div>
           <div class='grid place-items-center gap-2 text-center'>
             <img src='/img/icono4.webp' alt='Rocket' class='w-20 md:w-32' />
-            <p>
-              <strong>+2,000 visitante</strong><br />
-              profesionales
-            </p>
+            <p set:html={t('home.text_7')} />
           </div>
         </div>
       </BlurFade>
@@ -59,7 +48,7 @@ import { TextReveal } from '../ui/text-reveal.tsx'
           class='border-r-2 border-slate-950 border-dotted ps-5 md:ps-20 h-full text-xl'
         >
           <p class='text-black md:text-white text-3xl font-bold'>
-            Perfil del <br />EXPOSITOR
+            {t('home.text_8')}
           </p>
           <p class='mt-10 flex gap-2'>
             <svg
@@ -76,7 +65,7 @@ import { TextReveal } from '../ui/text-reveal.tsx'
                 d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
               ></path>
             </svg>
-            Fabricantes e importadores de drones
+            {t('home.text_9')}
           </p>
           <p class='flex gap-2'>
             <svg
@@ -93,7 +82,7 @@ import { TextReveal } from '../ui/text-reveal.tsx'
                 d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
               ></path>
             </svg>
-            Tecnología embebida
+            {t('home.text_10')}
           </p>
           <p class='flex gap-2'>
             <svg
@@ -110,7 +99,7 @@ import { TextReveal } from '../ui/text-reveal.tsx'
                 d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
               ></path>
             </svg>
-            Robótica
+            {t('home.text_11')}
           </p>
           <p class='flex gap-2'>
             <svg
@@ -127,7 +116,7 @@ import { TextReveal } from '../ui/text-reveal.tsx'
                 d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
               ></path>
             </svg>
-            Sistemas autónomos
+            {t('home.text_12')}
           </p>
           <p class='flex gap-2'>
             <svg
@@ -144,7 +133,7 @@ import { TextReveal } from '../ui/text-reveal.tsx'
                 d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
               ></path>
             </svg>
-            Equipos relacionados
+            {t('home.text_13')}
           </p>
           <p class='flex gap-2'>
             <svg
@@ -161,7 +150,7 @@ import { TextReveal } from '../ui/text-reveal.tsx'
                 d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
               ></path>
             </svg>
-            Plataformas de procesamiento de datos
+            {t('home.text_14')}
           </p>
           <p class='flex gap-2'>
             <svg
@@ -178,7 +167,7 @@ import { TextReveal } from '../ui/text-reveal.tsx'
                 d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
               ></path>
             </svg>
-            Proveedores de servicios
+            {t('home.text_15')}
           </p>
           <p class='flex gap-2'>
             <svg
@@ -195,7 +184,7 @@ import { TextReveal } from '../ui/text-reveal.tsx'
                 d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
               ></path>
             </svg>
-            Entes reguladores
+            {t('home.text_16')}
           </p>
           <p class='flex gap-2'>
             <svg
@@ -212,7 +201,7 @@ import { TextReveal } from '../ui/text-reveal.tsx'
                 d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
               ></path>
             </svg>
-            Universidades
+            {t('home.text_17')}
           </p>
           <p class='flex gap-2'>
             <svg
@@ -229,7 +218,7 @@ import { TextReveal } from '../ui/text-reveal.tsx'
                 d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'
               ></path>
             </svg>
-            Startups
+            {t('home.text_18')}
           </p>
         </div>
       </BlurFade>
@@ -246,7 +235,8 @@ import { TextReveal } from '../ui/text-reveal.tsx'
             <div
               class='flex gap-2 items-center mx-auto bg-[#0c3138] rounded-md p-2 font-bold w-fit'
             >
-              VISITANTE <svg
+              {t('home.text_19')}
+              <svg
                 xmlns='http://www.w3.org/2000/svg'
                 fill='none'
                 viewBox='0 0 24 24'
@@ -263,24 +253,22 @@ import { TextReveal } from '../ui/text-reveal.tsx'
             </div>
             <div class='mt-5 grid lg:grid-cols-2 gap-5 lg:text-lg'>
               <ul class='list-disc'>
-                <li>Agricultura</li>
-                <li>Media Ambiente</li>
-                <li>Gobiernos de cuidades</li>
-                <li>Infraestructura</li>
-                <li>Movilidad</li>
-                <li>Forestal</li>
-                <li>Construcción</li>
-                <li>Seguridad</li>
+                <li>{t('home.text_20')}</li>
+                <li>{t('home.text_21')}</li>
+                <li>{t('home.text_22')}</li>
+                <li>{t('home.text_23')}</li>
+                <li>{t('home.text_24')}</li>
+                <li>{t('home.text_25')}</li>
+                <li>{t('home.text_26')}</li>
               </ul>
               <ul class='list-disc'>
-                <li>Minería</li>
-                <li>Gas y Petróleo</li>
-                <li>Energía</li>
-                <li>Defensa</li>
-                <li>Telecomunicaciones</li>
-                <li>Saneamiento y Obra</li>
-                <li>Pública</li>
-                <li>Universidades</li>
+                <li>{t('home.text_28')}</li>
+                <li>{t('home.text_29')}</li>
+                <li>{t('home.text_30')}</li>
+                <li>{t('home.text_31')}</li>
+                <li>{t('home.text_32')}</li>
+                <li>{t('home.text_27')}</li>
+                <li>{t('home.text_34')}</li>
               </ul>
             </div>
           </div>

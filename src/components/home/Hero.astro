@@ -1,5 +1,6 @@
 ---
 import { FlipText } from '../ui/flip-text'
+import { t } from 'i18next'
 ---
 
 <section
@@ -8,7 +9,7 @@ import { FlipText } from '../ui/flip-text'
   <div class='p-5'>
     <FlipText
       className='text-md font-extrabold -tracking-widest text-[#1e2023] md:text-2xl md:leading-[5rem] '
-      word=' 17 y 18 DE OCTUBRE 2025'
+      word={t('home.date')}
       client:only
     />
   </div>
@@ -31,23 +32,23 @@ import { FlipText } from '../ui/flip-text'
     />
     <FlipText
       className='text-md tracking-tighter text-[#1e2023] md:text-xl md:leading-[2rem]'
-      word='"Liberando el Potencial Aéreo:'
+      word={t('home.text_1')}
       client:only
     />
     <FlipText
       className='text-md tracking-tighter	font-bold text-[#1e2023] md:text-xl md:leading-[2rem] italic'
-      word='El Mundo de los Drones"'
+      word={t('home.text_2')}
       client:only
     />
     <div class='mt-10 grid md:flex'>
       <FlipText
         className='text-md tracking-tighter	font-bold text-[#1e2023] md:text-xl md:leading-[2rem] '
-        word='CENTRO ECUESTRE SEDENA, '
+        word='CENTRO BANAMEX,  '
         client:only
       />
       <FlipText
         className='text-md tracking-tighter text-[#1e2023] md:text-xl md:leading-[2rem] '
-        word='CIUDAD DE MÉXICO, '
+        word='CIUDAD DE MÉXICO'
         client:only
       />
     </div>
