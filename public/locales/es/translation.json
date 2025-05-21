@@ -4,6 +4,7 @@
         "categories": "Categorías",
         "exhibitors": "Expositor",
         "floor_plan": "PLANO DRONE 2025",
+        "contract": "CONTRATO DRONE 2025",
         "visitors": "Visitantes",
         "register": "Registro"
     },
@@ -61,6 +62,21 @@
         "text_50": "-Establece contactos e impulsa el desarrollo del sector aéreo<br /> en materia de drones en México.",
         "text_51": "-Amplia tu red de contactos especializados en drones.",
         "text_52": "-Impulsa tu empresa ante el sector público, privado y medios.",
-        "text_53": "-Expone y promueve productos de drones con un alto impacto<br /> visual y presencial con canales de contenido innovadores"
+        "text_53": "-Expone y promueve productos de drones con un alto impacto<br /> visual y presencial con canales de contenido innovadores",
+        "text_54": "Agricultura",
+        "text_55": "Movilidad",
+        "text_56": "Gas y Petróleo",
+        "text_57": "Medio Ambiente",
+        "text_58": "Gobiernos de Cuidades",
+        "text_59": "Infraestructura",
+        "text_60": "Construcción",
+        "text_61": "Seguridad",
+        "text_62": "Minería",
+        "text_63": "Energía",
+        "text_64": "Telecommunicaciones",
+        "text_65": "Saneamiento y obra pública",
+        "text_66": "Forestal",
+        "text_67": "Defensa",
+        "text_68": "Universidades"
     }
 } 

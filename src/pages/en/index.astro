@@ -6,6 +6,7 @@ import "../../styles/global.css";
 import Welcome from "@/components/home/Welcome.astro";
 import Category from "@/components/home/Category.astro";
 import { BlurFade } from "@/components/ui/blur-fade";
+import Visitor from "@/components/home/Visitor.astro";
 
 changeLanguage("en");
 ---
@@ -13,6 +14,7 @@ changeLanguage("en");
 <Layout>
   <Hero />
   <Welcome />
+  <Visitor />
   <BlurFade delay={1} inView direction={'up'} client:only>
     <Category />
   </BlurFade>

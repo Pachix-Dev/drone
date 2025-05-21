@@ -4,6 +4,7 @@
         "categories": "Categories",
         "exhibitors": "Exhibitor",
         "floor_plan": "FLOORPLAN DRONE 2025",
+        "contract": "CONTRATO DRONE 2025",
         "visitors": "Visitors",
         "register": "Register"
     },
@@ -61,6 +62,21 @@
         "text_50":"-Establishes contacts and drives the development of the aerial<br /> sector in terms of drones in Mexico.",
         "text_51":"-Expands your network of contacts specialized in drones.",
         "text_52":"-Encourages your company before the public, private and media sectors.",
-        "text_53":"-Exhibits and promotes drone products with a high<br /> visual and face-to-face impact with innovative content channels."
+        "text_53":"-Exhibits and promotes drone products with a high<br /> visual and face-to-face impact with innovative content channels.",
+        "text_54": "Agriculture",
+        "text_55": "Mobility",
+        "text_56": "Oil and Gas",
+        "text_57": "Environmental",
+        "text_58": "City Governments",
+        "text_59": "Infrastructure",
+        "text_60": "Construction",
+        "text_61": "Seguridad",
+        "text_62": "Mining",
+        "text_63": "Energy",
+        "text_64": "Telecommunicaciones",
+        "text_65": "Sanitation and public works",
+        "text_66": "Forestry",
+        "text_67": "Defense",
+        "text_68": "Universities"
     }
 }
