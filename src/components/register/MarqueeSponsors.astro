@@ -1,0 +1,167 @@
+---
+interface Props {
+    partners: Array<{
+        link?: string;
+        src: string;
+        alt: string;
+        width?: number;
+        height?: number;
+    }>;
+    isLeftToRight: boolean;
+}
+
+const { partners, isLeftToRight } = Astro.props as Props;
+---
+
+<div class="enable-animation">
+    <div class="marquee marquee--hover-pause">
+        <div
+            class="bg-gradient-left bg-gradient-to-l from-transparent to-[#0f172af7]"
+        >
+        </div>
+        <div
+            class="bg-gradient-right bg-gradient-to-l to-transparent from-[#0f172af7]"
+        >
+        </div>
+        <ul
+            class="marquee__content"
+            style={`--animation: ${isLeftToRight ? "scroll" : "scroll-abs"}`}
+        >
+            {
+                partners?.map((partner) => (
+                    <li class="bg-[#596070] rounded-xl hover:bg-[#60729B]">
+                        <a
+                            href={partner.link}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label={partner.alt}
+                        >
+                            <img
+                                src={partner.src}
+                                alt={partner.alt}
+                                width={partner.width}
+                                height={partner.height}
+                                loading="lazy"
+                                style={{ maxWidth: "100%" }}
+                            />
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+        <ul
+            class="marquee__content"
+            style={`--animation: ${isLeftToRight ? "scroll" : "scroll-abs"}`}
+        >
+            {
+                partners?.map((partner) => (
+                    <li class="bg-[#596070] rounded-xl hover:bg-[#60729B]">
+                        <a
+                            href={partner.link}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label={partner.alt}
+                        >
+                            <img
+                                src={partner.src}
+                                alt={partner.alt}
+                                width={partner.width}
+                                height={partner.height}
+                                loading="lazy"
+                                style={{ maxWidth: "100%" }}
+                            />
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+</div>
+
+<style>
+    .marquee {
+        --gap: 3rem;
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        user-select: none;
+        gap: var(--gap);
+    }
+
+    .bg-gradient-left {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 20%;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .bg-gradient-right {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 20%;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .marquee__content {
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--gap);
+        min-width: 100%;
+    }
+
+    .marquee__content img {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .marquee__content img:hover {
+        transform: scale(1.1);
+    }
+
+    @keyframes scroll {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(calc(0 - var(--gap)));
+        }
+    }
+
+    @keyframes scroll-abs {
+        from {
+            transform: translateX(calc(0 + var(--gap)));
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .marquee__content {
+            animation-play-state: paused !important;
+        }
+    }
+
+    .enable-animation .marquee__content {
+        animation: var(--animation) 55s linear infinite;
+    }
+
+    .marquee--hover-pause:hover .marquee__content {
+        animation-play-state: paused;
+    }
+
+    @media screen and (max-width: 768px) {
+        /* Adjust styles for smaller screens */
+        .marquee {
+            --gap: 1rem;
+        }
+    }
+</style>

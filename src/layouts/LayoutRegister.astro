@@ -1,0 +1,163 @@
+---
+import "../styles/global.css";
+
+import { ViewTransitions } from "astro:transitions";
+import { HeadHrefLangs } from "astro-i18next/components";
+import i18next from "i18next";
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang={i18next.language}>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/png" href="/img/favicondrone.png" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <ViewTransitions />
+        <HeadHrefLangs />
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-V191B7FQL7"
+        ></script>
+        <script is:inline>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-V191B7FQL7");
+        </script>
+
+        <!-- Meta Pixel Code -->
+        <script is:inline>
+            !(function (f, b, e, v, n, t, s) {
+                if (f.fbq) return;
+                n = f.fbq = function () {
+                    n.callMethod
+                        ? n.callMethod.apply(n, arguments)
+                        : n.queue.push(arguments);
+                };
+
+                if (!f._fbq) f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = "2.0";
+
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+
+                s.parentNode.insertBefore(t, s);
+            })(
+                window,
+                document,
+                "script",
+
+                "https://connect.facebook.net/en_US/fbevents.js",
+            );
+
+            fbq("init", "7461615930607048");
+            fbq("track", "PageView");
+            fbq("track", "Purchase", {
+                value: 0.0,
+                currency: "MXN",
+            });
+        </script>
+
+        <noscript
+            ><img
+                height="1"
+                width="1"
+                style="display:none"
+                src="https://www.facebook.com/tr?id=7461615930607048&ev=PageView&noscript=1"
+            /></noscript
+        >
+        <!-- End Meta Pixel Code -->
+
+        <!-- Google Tag Manager -->
+        <script is:inline>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js",
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-PZFW3K9B");
+        </script>
+        <!-- End Google Tag Manager -->
+    </head>
+    <body class="relative h-full md:h-screen">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript
+            ><iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-PZFW3K9B"
+                height="0"
+                width="0"
+                style="display:none;visibility:hidden"></iframe></noscript
+        >
+        <!-- End Google Tag Manager (noscript) -->
+        <slot />
+        <style is:global>
+            ::-webkit-scrollbar {
+                height: 5px;
+                width: 5px;
+                background-color: #f5f5f5;
+            }
+            ::-webkit-scrollbar-thumb {
+                background-color: black;
+            }
+            ::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            }
+        </style>
+        <script type="text/javascript">
+            _linkedin_partner_id = "5150082";
+            window._linkedin_data_partner_ids =
+                window._linkedin_data_partner_ids || [];
+            window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+        </script><script type="text/javascript">
+            (function (l) {
+                if (!l) {
+                    window.lintrk = function (a, b) {
+                        window.lintrk.q.push([a, b]);
+                    };
+                    window.lintrk.q = [];
+                }
+                var s = document.getElementsByTagName("script")[0];
+                var b = document.createElement("script");
+                b.type = "text/javascript";
+                b.async = true;
+                b.src =
+                    "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+                s.parentNode.insertBefore(b, s);
+            })(window.lintrk);
+        </script>
+        <noscript>
+            <img
+                height="1"
+                width="1"
+                style="display:none;"
+                alt=""
+                src="https://px.ads.linkedin.com/collect/?pid=5150082&fmt=gif"
+            />
+        </noscript>
+    </body>
+</html>
