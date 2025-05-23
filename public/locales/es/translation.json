@@ -1,5 +1,5 @@
 {
-    "menu": {        
+    "menu": {
         "about_us": "¿Quiénes somos?",
         "categories": "Categorías",
         "exhibitors": "Expositor",
@@ -44,7 +44,7 @@
         "text_32": "Telecomunicaciones",
         "text_33": "Saneamiento y obra pública",
         "text_34": "Universidades",
-        "text_35": "CATEGORÍAS",        
+        "text_35": "CATEGORÍAS",
         "text_36": "Drones",
         "text_37": "Navegación y posicionamiento",
         "text_38": "Cartografía",
@@ -79,4 +79,4 @@
         "text_67": "Defensa",
         "text_68": "Universidades"
     }
-} 
+}

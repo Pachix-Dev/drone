@@ -1,0 +1,59 @@
+---
+import i18next, { changeLanguage, t } from "i18next";
+import { RegisterForm } from "../components/register/RegisterForm.jsx";
+import LayoutRegister from "../layouts/LayoutRegister.astro";
+import { sponsors } from "../data/constans_logos.js";
+import MarqueeSponsors from "../components/register/MarqueeSponsors.astro";
+
+changeLanguage("es");
+
+const registerTranslations = t("register", { returnObjects: true });
+const currentLanguage = i18next.language;
+---
+
+<LayoutRegister title=" DRONE | Registro 2025">
+    <video
+        src="/videos/bg-drone-registro.mp4"
+        autoplay
+        loop
+        muted
+        playsinline
+        class="w-full h-full object-fill fixed top-0 z-[-1]"
+    >
+    </video>
+    <main class="py-5 grid w-full content-center container mx-auto px-4">
+        <section class="mb-0 max-w-screen-xl mx-auto">
+            <p class="text-center font-extrabold text-3xl mb-5">
+                {t("home.title-sponsors")}
+            </p>
+            <MarqueeSponsors partners={sponsors} isLeftToRight />
+        </section>
+        <div class="m-5 border-rad bg-slate-900/90">
+            <h1 class="text-center font-extrabold text-4xl">
+                {t("register.title")}
+            </h1>
+            <p class="text-center text-2xl font-bold">
+                {t("register.description")}
+            </p>
+        </div>
+        <RegisterForm
+            translates={registerTranslations}
+            currentLanguage={currentLanguage}
+            client:only="react"
+        />
+    </main>
+</LayoutRegister>
+<style>
+    body {
+        color: white;
+    }
+    section {
+        background-color: rgba(15, 23, 42, 0.969);
+        border-radius: 15px;
+        width: 100%;
+        padding: 2rem;
+    }
+    .border-rad {
+        border-radius: 15px;
+    }
+</style>
