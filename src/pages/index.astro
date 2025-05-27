@@ -13,9 +13,21 @@ changeLanguage("es");
 
 <Layout>
   <Hero />
+  <lite-youtube
+    videoid='c3l6dS9lhtI'
+    posterquality='maxresdefault'
+    params='controls=0&enablejsapi=1'
+    class='container mx-auto px-4 rounded-lg w-full h-full my-10'
+  >
+  </lite-youtube>
+
   <Welcome />
+
   <Visitor />
   <BlurFade delay={1} inView direction={'up'} client:only>
     <Category />
   </BlurFade>
 </Layout>
+<script>
+  import '@justinribeiro/lite-youtube'
+</script>
