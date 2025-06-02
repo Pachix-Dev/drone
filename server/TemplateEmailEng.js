@@ -83,7 +83,7 @@ const TemplateEmailEng = async ({ name, paternSurname, maternSurname }) => {
           </td>
           <td style="padding:20px;" align="center">
             <p style="background: #6d73e2;width:fit-content;border-radius: 20px;padding:20px;margin:auto;">
-              <a style="text-decoration:none;color:white;" href="https://industrialtransformation.mx/files/Floorplan_ITM_2024_31.05.2023.pdf" target="_blank">
+              <a style="text-decoration:none;color:white;" href="https://drone.igeco.mx/files/Floorplan-ITM-2025-16-05-2025-V4-0.pdf" target="_blank">
                 DRONE 2025 FLOOR PLAN 
               </a>
             </p>         
@@ -92,14 +92,14 @@ const TemplateEmailEng = async ({ name, paternSurname, maternSurname }) => {
         <tr>
           <td style="padding:20px;" align="center">
            <p style="background: #6d73e2;width:fit-content;border-radius: 20px;padding:20px;margin:auto;">
-            <a style="text-decoration:none;color:white;" href="https://industrialtransformation.mx/hotels" target="_blank">
+            <a style="text-decoration:none;color:white;" href="https://drone.igeco.mx/" target="_blank">
               BOOK HERE YOUR LODGING<br /> WITH PREFERENTIAL RATES
             </a>
            </p>           
           </td>
           <td style="padding:20px;" align="center">
             <p style="background: #6d73e2;width:fit-content;border-radius: 20px;padding:20px;margin:auto;">
-              <a style="text-decoration:none;color:white;" href="https://industrialtransformation.mx/registro" target="_blank">
+              <a style="text-decoration:none;color:white;" href="https://drone.igeco.mx/registro" target="_blank">
                 INVITE A COLLEAGUE
               </a>          
           </td>
