@@ -332,14 +332,14 @@ async function sendEmailRegistro(data, pdfAtch = null, paypal_id_transaction = n
 
         const emailContent = data.currentLanguage === 'es' ? await TemplateEmail({ ...data }) : await TemplateEmailEng({ ...data });
         await resend.emails.send({
-            from: 'DRONE 2025 <noreply@industrialtransformation.mx>',
+            from: 'DRONE 2025 <noreply@igeco.mx>',
             to: data.email,
             subject: data.currentLanguage === 'es' ? 'Confirmación de registro DRONE 2025' : 'Confirmation of registration DRONE 2025',
             html: emailContent,
             attachments: [
                 {
                     filename: `${paypal_id_transaction}.pdf`,
-                    path: `https://industrialtransformation.mx/invoices/${paypal_id_transaction}.pdf`,
+                    path: `https://drone.igeco.mx/invoices/${paypal_id_transaction}.pdf`,
                     content_type: 'application/pdf'
                 },
             ],

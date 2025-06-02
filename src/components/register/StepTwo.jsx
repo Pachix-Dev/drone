@@ -163,38 +163,28 @@ export function StepTwo({ translates }) {
               {translates.industry_option_2}
             </option>
             <option value='CONSTRUCCIÓN'>{translates.industry_option_3}</option>
-            <option value='ENERGÍA'>
-              {translates.industry_option_4}
+            <option value='ENERGÍA'>{translates.industry_option_4}</option>
+            <option value='FORESTAL'>{translates.industry_option_5}</option>
+            <option value='MOVILIDAD'>{translates.industry_option_6}</option>
+            <option value='GOBIERNOS DE CIUDADES'>
+              {translates.industry_option_7}
             </option>
-            <option value='FORESTAL'>
-              {translates.industry_option_5}
-            </option>
-            <option value='MOVILIDAD'>
-              {translates.industry_option_6}
-            </option>
-            <option value='GOBIERNOS DE CIUDADES'>{translates.industry_option_7}</option>
-            <option value='SEGURIDAD'>
-              {translates.industry_option_8}
-            </option>
+            <option value='SEGURIDAD'>{translates.industry_option_8}</option>
             <option value='TELECOMUNICACIONES'>
               {translates.industry_option_9}
             </option>
-            <option value='DEFENSA'>
-              {translates.industry_option_10}
-            </option>
+            <option value='DEFENSA'>{translates.industry_option_10}</option>
             <option value='GAS Y PETRÓLEO'>
               {translates.industry_option_11}
             </option>
             <option value='INFRESTUCTURA'>
               {translates.industry_option_12}
             </option>
-            <option value='MINERÍA'>
-              {translates.industry_option_13}
-            </option>
+            <option value='MINERÍA'>{translates.industry_option_13}</option>
             <option value='SANEAMIENTO Y OBRA PUBLICA'>
               {translates.industry_option_14}
             </option>
-            <option value='UNIVERSIDADES'>
+            <option value='SECTOR EDUCATIVO'>
               {translates.industry_option_15}
             </option>
           </select>
@@ -219,18 +209,34 @@ export function StepTwo({ translates }) {
             className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-white *:text-black'
           >
             <option value=''>{translates.select_option}</option>
-            <option value='CEO / PRESIDENTE'>
-              {translates.position_1}
-            </option>
-            <option value='DIRECTOR / COORDINADOR DE AREA'>
-              {translates.position_2}
-            </option>
-            <option value='JEFE / GERENTE DE AREA'>
-              {translates.position_3}
-            </option>
-            <option value='PERSONAL OPERATIVO'>
-              {translates.position_4}
-            </option>
+            {industry === 'SECTOR EDUCATIVO' ? (
+              <>
+                <option value={translates.position_5}>
+                  {translates.position_5}
+                </option>
+                <option value={translates.position_6}>
+                  {translates.position_6}
+                </option>
+                <option value={translates.position_7}>
+                  {translates.position_7}
+                </option>
+              </>
+            ) : (
+              <>
+                <option value={translates.position_1}>
+                  {translates.position_1}
+                </option>
+                <option value={translates.position_2}>
+                  {translates.position_2}
+                </option>
+                <option value={translates.position_3}>
+                  {translates.position_3}
+                </option>
+                <option value={translates.position_4}>
+                  {translates.position_4}
+                </option>
+              </>
+            )}
           </select>
           {errors.position && (
             <p className='text-[#ffe200] font-light'>
@@ -251,20 +257,22 @@ export function StepTwo({ translates }) {
             className='mt-2 w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm text-white *:text-black uppercase'
           >
             <option value=''>{translates.select_option}</option>
-            <option value='CONSEJO DE ADMINISTRACIÓN / COMITÉ EJECUTIVO'>{translates.area_1}</option>
-            <option value='COMPRAS'>{translates.area_2}</option>
-            <option value='FINANZAS'>{translates.area_3}</option>
-            <option value='INVESTIGACIÓN Y DESARROLLO'>{translates.area_4}</option>
-            <option value='INFORMÁTICA / TI'>{translates.area_5}</option>
-            <option value='LOGÍSTICA'>{translates.area_6}</option>
-            <option value='MARKETING'>{translates.area_7}</option>
-            <option value='RECURSOS HUMANOS'>{translates.area_8}</option>
-            <option value='PRENSA'>{translates.area_9}</option>
-            <option value='PRODUCCIÓN / INGENIERÍA'>{translates.area_10}</option>
-            <option value='VENTAS Y DISTRIBUCIÓN'>{translates.area_11}</option>
-            <option value='ADMINISTRACIÓN'>{translates.area_12}</option>
-            <option value='SECRETARÍA'>{translates.area_13}</option>
-
+            {industry === 'SECTOR EDUCATIVO' ? (
+              <>
+                <option value={translates.area_1}>{translates.area_1}</option>
+                <option value={translates.area_2}>{translates.area_2}</option>
+                <option value={translates.area_3}>{translates.area_3}</option>
+                <option value={translates.area_4}>{translates.area_4}</option>
+              </>
+            ) : (
+              <>
+                {translates.list_area.map((area, index) => (
+                  <option key={index} value={area}>
+                    {area}
+                  </option>
+                ))}
+              </>
+            )}
           </select>
           {errors.area && (
             <p className='text-[#ffe200] font-light'>{errors.area.message}</p>

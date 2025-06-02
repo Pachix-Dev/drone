@@ -20,6 +20,7 @@ export function StepFour({ translates, currentLanguage }) {
     position,
     company,
     total,
+    typeRegister,
     setCompleteRegister,
     setInvoiceDownToLoad,
     decrementStep,
@@ -90,12 +91,13 @@ export function StepFour({ translates, currentLanguage }) {
         email,
         position,
         company,
+        typeRegister,
         currentLanguage,
       }),
     })
     const orderData = await response.json()
     if (orderData.status) {
-      //clear()
+      clear()
       setCompleteRegister(true)
       setInvoiceDownToLoad(orderData?.invoice)
       currentLanguage === 'es'

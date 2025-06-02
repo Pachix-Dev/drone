@@ -7,22 +7,24 @@ import Welcome from "@/components/home/Welcome.astro";
 import Category from "@/components/home/Category.astro";
 import { BlurFade } from "@/components/ui/blur-fade";
 import Visitor from "@/components/home/Visitor.astro";
+import FreeRegister from "@/components/home/FreeRegister.astro";
 
 changeLanguage("es");
 ---
 
-<Layout>
+<Layout title='DRONE INNOVATORS FORUM MX'>
   <Hero />
-  <lite-youtube
-    videoid='c3l6dS9lhtI'
-    posterquality='maxresdefault'
-    params='controls=0&enablejsapi=1'
-    class='container mx-auto px-4 rounded-lg w-full h-full my-10'
-  >
-  </lite-youtube>
-
+  <FreeRegister />
+  <section class='bg-[#1e2023]'>
+    <lite-youtube
+      videoid='c3l6dS9lhtI'
+      posterquality='maxresdefault'
+      params='controls=0&enablejsapi=1'
+      class='container mx-auto px-4 rounded-lg w-full h-full py-10'
+    >
+    </lite-youtube>
+  </section>
   <Welcome />
-
   <Visitor />
   <BlurFade delay={1} inView direction={'up'} client:only>
     <Category />
