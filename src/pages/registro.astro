@@ -1,14 +1,14 @@
 ---
-import i18next, { changeLanguage, t } from 'i18next'
-import { RegisterForm } from '../components/register/RegisterForm.jsx'
-import LayoutRegister from '../layouts/LayoutRegister.astro'
-import { sponsors } from '../data/constans_logos.js'
-import MarqueeSponsors from '../components/register/MarqueeSponsors.astro'
+import i18next, { changeLanguage, t } from "i18next";
+import { RegisterForm } from "../components/register/RegisterForm.jsx";
+import LayoutRegister from "../layouts/LayoutRegister.astro";
+import { sponsors } from "../data/constans_logos.js";
+import MarqueeSponsors from "../components/register/MarqueeSponsors.astro";
 
-changeLanguage('es')
+changeLanguage("es");
 
-const registerTranslations = t('register', { returnObjects: true })
-const currentLanguage = i18next.language
+const registerTranslations = t("register", { returnObjects: true });
+const currentLanguage = i18next.language;
 ---
 
 <LayoutRegister title='DRONE INNOVATORS FORUM MX '>
