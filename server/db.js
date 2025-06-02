@@ -198,18 +198,7 @@ export class RegisterModel {
           error: 'No se encontró el usuario',
         }
       }
-
-      const [vipUsers] = await connection.query(
-        'SELECT * FROM users_vip WHERE user_id = ?',
-        [id]
-      )
-      if (vipUsers.length > 0) {
-        return {
-          status: false,
-          error: 'Ya eres usuario VIP',
-        }
-      }
-
+      
       return {
         status: true,
         user: users[0],
