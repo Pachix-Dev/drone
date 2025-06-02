@@ -177,7 +177,7 @@ export function StepTwo({ translates }) {
             <option value='GAS Y PETRÓLEO'>
               {translates.industry_option_11}
             </option>
-            <option value='INFRESTUCTURA'>
+            <option value='INFRAESTUCTURA'>
               {translates.industry_option_12}
             </option>
             <option value='MINERÍA'>{translates.industry_option_13}</option>

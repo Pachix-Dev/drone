@@ -198,11 +198,11 @@ async function generatePDFInvoice(paypal_id_transaction, body, uuid) {
         .fontSize(8)
         .text('1.', 330)
         .font('Helvetica')
-        .text('Tu gafete es tu pase a la exposición de DRONE 2025. Deberás portarlo en todo momento.', 345, 75, {
+        .text('Tu gafete es tu pase a la exposición de Drone Innovators Forum / ITM / AMOF 2025. Deberás portarlo en todo momento.', 345, 75, {
             width: 250,
             align: 'justify'
         })
-    doc.text('Your badge is your access pass to DRONE 2025 tradeshow. You must wear it at all times.', {
+    doc.text('Your badge is your access pass to Drone Innovators Forum / ITM / AMOF 2025 tradeshow. You must wear it at all times.', {
         width: 250,
         align: 'justify'
     })

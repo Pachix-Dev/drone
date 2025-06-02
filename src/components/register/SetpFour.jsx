@@ -37,7 +37,7 @@ export function StepFour({ translates, currentLanguage }) {
     : 'https://drone.igeco.mx/server/'
 
   const [copied, setCopied] = useState(false)
-  const textToCopy = '030225900038362623'
+  const textToCopy = '030225900038110671'
 
   const handleCopy = async (event) => {
     event.preventDefault()
@@ -133,7 +133,7 @@ export function StepFour({ translates, currentLanguage }) {
 
   return (
     <>
-      <div className='flex gap-10 '>
+      <div className='grid md:flex gap-10 '>
         <div className='w-full'>
           <div className='rounded-xl border-2 p-4 bg-white text-black'>
             <div className='flex justify-between items-center'>
@@ -241,7 +241,12 @@ export function StepFour({ translates, currentLanguage }) {
                     __html: translates.instructions_text_2,
                   }}
                 />
-                <p className='mt-2'>{translates.instructions_text_3}</p>
+                <p
+                  className='mt-2'
+                  dangerouslySetInnerHTML={{
+                    __html: translates.instructions_text_3,
+                  }}
+                />
                 <p
                   className='mt-2'
                   dangerouslySetInnerHTML={{

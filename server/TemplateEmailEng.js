@@ -15,7 +15,7 @@ const TemplateEmailEng = async ({ name, paternSurname, maternSurname }) => {
               WELCOME, ${name} ${paternSurname} ${maternSurname}.<BR /> YOUR REGISTRATION WAS SUCCESSFUL.
             </h2>
             <h2 style='text-align: center;'>
-              THANK YOU FOR BEING PART OF <span style="color:#6d73e2;font-weight:bold;">DRONE INNOVATORS FORUMMX 2025, </span>UNLEASHING THE AERIAL POTENTIAL: THE WORLD OF DRONES
+              THANK YOU FOR BEING PART OF <span style="color:#6d73e2;font-weight:bold;">DRONE INNOVATORS FORUM MX 2025, </span>UNLEASHING THE AERIAL POTENTIAL: THE WORLD OF DRONES
             </h2>
             <div style="text-align: justify;font-size:22px;">
               Discover the latest in Drone manufacturers and importers, Embedded technology Robotics, Autonomous systems, Related equipment Data processing platforms, which bring to you the global leaders in <strong>Drones, Navigation and Positioning, Cartography, Geoprocessing, Artificial intelligence, Surveying, Remote sensors, Monitoring and inspections, Laser scanning,</strong> who are transforming the future of industry.

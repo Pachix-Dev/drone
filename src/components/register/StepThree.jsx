@@ -43,6 +43,9 @@ export function StepThree({ translates }) {
   } = useRegisterForm()
 
   const options = [
+    { label: 'Expo Seguridad', value: 'Expo Seguridad' },
+    { label: 'MundoGeo ', value: 'MundoGeo ' },
+    { label: 'Xponential', value: 'Xponential' },
     { label: 'Expo Manufactura', value: 'Expo Manufactura' },
     { label: 'Expomaq', value: 'Expomaq' },
     { label: 'Fabtech', value: 'Fabtech' },
@@ -57,7 +60,7 @@ export function StepThree({ translates }) {
     { label: 'Expo Eléctrica', value: 'Expo Eléctrica' },
     { label: 'Meximold', value: 'Meximold' },
     { label: 'Fitma', value: 'Fitma' },
-    { label: 'ITMS', value: 'ITMS' },
+    { label: 'IMTS', value: 'IMTS' },
     { label: 'Hannover Messe (Alemania)', value: 'Hannover Messe (Alemania)' },
   ]
 

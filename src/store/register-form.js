@@ -47,13 +47,13 @@ const useRegisterForm = create(
                     price: 300,
                     included: [
                         "Acceso a la feria los 3 días del evento",
-                        "Acceso a conferencias leaders of tomorrow",
-                        "Acceso a conferencias transformation area",
+                        "Acceso a conferencias Leaders of Tomorrow",
+                        "Acceso a conferencias Transformation Area",
                     ],
                     included_en: [
                         "Access to the fair for 3 days of the event",
-                        "Access to leaders of tomorrow conferences",
-                        "Access to transformation area conferences",
+                        "Access to Leaders of Tomorrow conferences",
+                        "Access to Transformation Area conferences",
                     ],
                 }
             ],
@@ -142,7 +142,7 @@ const useRegisterForm = create(
                 code_cortesia: ""
             })
         }),
-        { name: "register-form-drone-new" }
+        { name: "register-form-drone-new-2" }
     )
 )
 
