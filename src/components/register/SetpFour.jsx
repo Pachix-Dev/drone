@@ -34,7 +34,7 @@ export function StepFour({ translates, currentLanguage }) {
 
   const urlbase = import.meta.env.DEV
     ? 'http://localhost:3010/'
-    : 'https://drone.igeco.mx/'
+    : 'https://drone.igeco.mx/server/'
 
   const [copied, setCopied] = useState(false)
   const textToCopy = '030225900038362623'
