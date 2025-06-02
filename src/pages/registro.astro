@@ -1,14 +1,14 @@
 ---
-import i18next, { changeLanguage, t } from "i18next";
-import { RegisterForm } from "../components/register/RegisterForm.jsx";
-import LayoutRegister from "../layouts/LayoutRegister.astro";
-import { sponsors } from "../data/constans_logos.js";
-import MarqueeSponsors from "../components/register/MarqueeSponsors.astro";
+import i18next, { changeLanguage, t } from 'i18next'
+import { RegisterForm } from '../components/register/RegisterForm.jsx'
+import LayoutRegister from '../layouts/LayoutRegister.astro'
+import { sponsors } from '../data/constans_logos.js'
+import MarqueeSponsors from '../components/register/MarqueeSponsors.astro'
 
-changeLanguage("es");
+changeLanguage('es')
 
-const registerTranslations = t("register", { returnObjects: true });
-const currentLanguage = i18next.language;
+const registerTranslations = t('register', { returnObjects: true })
+const currentLanguage = i18next.language
 ---
 
 <LayoutRegister title='DRONE INNOVATORS FORUM MX '>
@@ -22,15 +22,13 @@ const currentLanguage = i18next.language;
   >
   </video>
   <main class='py-5 grid w-full content-center container mx-auto px-4'>
-    {
-      /* <section class="mb-0 max-w-screen-xl mx-auto">
-            <p class="text-center font-extrabold text-3xl mb-5">
-                {t("home.title-sponsors")}
-            </p>
-            <MarqueeSponsors partners={sponsors} isLeftToRight />
-        </section>
-        */
-    }
+    <section class='mb-0 max-w-screen-xl mx-auto'>
+      <p class='text-center font-extrabold text-3xl mb-5'>
+        {t('home.title-sponsors')}
+      </p>
+      <MarqueeSponsors partners={sponsors} isLeftToRight />
+    </section>
+
     <div class='m-5 border-rad bg-slate-900/90 py-5'>
       <h1 class='text-center font-extrabold text-4xl'>
         {t('register.title')}
