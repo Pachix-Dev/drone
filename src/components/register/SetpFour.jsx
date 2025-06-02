@@ -50,10 +50,13 @@ export function StepFour({ translates, currentLanguage }) {
     }
   }
 
+  const clien_id = import.meta.env.DEV
+    ? 'AZ4hFSk_NoYY2zTeTvsFqPwsik-VE9OlcSedt4jh2RD77iPcvjeKEd1GtXA9qdo_5E4Kw_nYXxmkh6gH'
+    : 'AVhhqptSlv4ttbc6ih1u59_PvECLJoNQWBktqSAwD60JPnWN_XiwPLS0QP9Bth_bWuAJ44SQaHIBEMxB'
+
   const style = { layout: 'vertical' }
   const initialOptions = {
-    clientId:
-      'AZ4hFSk_NoYY2zTeTvsFqPwsik-VE9OlcSedt4jh2RD77iPcvjeKEd1GtXA9qdo_5E4Kw_nYXxmkh6gH',
+    clientId: clien_id,
     currency: 'MXN',
     intent: 'capture',
   }
