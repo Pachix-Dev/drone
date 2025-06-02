@@ -31,7 +31,7 @@ app.use(cors({
 }))
 
 const PORT = process.env.PORT || 3010
-const environment = process.env.NODE_ENV || 'sandbox';
+const environment = process.env.ENVIRONMENT || 'sandbox';
 const client_id = process.env.CLIENT_ID;
 const client_secret = process.env.CLIENT_SECRET;
 const endpoint_url = environment === "sandbox" ? "https://api-m.sandbox.paypal.com" : "https://api-m.paypal.com";
