@@ -44,23 +44,24 @@ const base = i18next.language === 'es' ? '' : `/${lang}`
         segundos={t('home.seconds')}
       />
       <div
-        class='container mx-auto py-5 px-4 backdrop-blur-sm bg-white/30 rounded-xl'
+        class='container mx-auto py-5 px-4 rounded-xl flex justify-center items-center'
       >
+        <a
+          href={`${base}/registro`}
+          class='card p-5 hover:scale-105 ease-in-out duration-300'
+        >
+          <span class='text-white z-10 font-extrabold text-xl'
+            >{t('register.title')}</span
+          >
+        </a>
         {
           /* 
-          <a
-            href={`${base}/registro`}
-            class='card p-5 hover:scale-105 ease-in-out duration-300'
-          >
-            <span class='text-white z-10 font-extrabold text-xl'
-              >{t('register.title')}</span
-            >
-          </a>
-          */
-        }
-        <p class='text-white text-center text-2xl font-bold'>
+          <p class='text-white text-center text-2xl font-bold'>
           {t('home.proximo')}
         </p>
+          
+          */
+        }
       </div>
     </div>
   </div>
@@ -151,7 +152,8 @@ const base = i18next.language === 'es' ? '' : `/${lang}`
           d='m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25'></path>
       </svg>
     </a>
-    
+      */
+    }
   </div>
 </section>
 <style>
@@ -170,7 +172,7 @@ const base = i18next.language === 'es' ? '' : `/${lang}`
     content: '';
     position: absolute;
     width: 250px;
-    background-image: linear-gradient(45deg, rgb(0, 183, 255), #e42128);
+    background-image: linear-gradient(45deg, rgb(0, 183, 255), #2392a2);
     height: 30px;
     animation: rotBGimg 3s linear infinite;
     transition: all 0.2s linear;
@@ -189,14 +191,14 @@ const base = i18next.language === 'es' ? '' : `/${lang}`
   .card::after {
     content: '';
     position: absolute;
-    background: #e42128;
+    background: #5f8cc1;
     inset: 5px;
     border-radius: 15px;
   }
-  /* .card:hover:before {
-  background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
-  animation: rotBGimg 3.5s linear infinite;
-} */
-    }
-  </div>
-</section>
+  /* 
+    .card:hover:before {
+      background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+      animation: rotBGimg 3.5s linear infinite;
+    } 
+  */
+</style>
