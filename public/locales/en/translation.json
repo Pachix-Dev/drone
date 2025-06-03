@@ -5,7 +5,8 @@
         "exhibitors": "Exhibitor",
         "floor_plan": "FLOORPLAN DRONE 2025",
         "contract": "CONTRATO DRONE 2025",
-        "visitors": "Visitors",
+        "visitors": "VISITORS",
+        "visitors_profile": "Visitor profile",        
         "register": "Register"
     },
     "home": {
@@ -17,7 +18,7 @@
         "titleITM": "THE MOST IMPORTANT WEEK IN THE WORLD OF DRONES IS APPROACHING",
         "date": "November 11 - 13, 2025",
         "credential": "You must present a company credential to have access to the fair.",
-        "date_text_cost": "Registration will open on June 1 and will have a cost of $300 pesos including taxes.",
+        "date_text_cost": "Registration is open and has a cost of $300 pesos including VAT.",
         "text_1": "Unlocking aerial potential:",
         "text_2": "The world of drones",
         "text_3": "The international drone and aerial technology Fair",
@@ -89,6 +90,7 @@
          "title-sponsors": "SPONSORS PLATINIUM"
     },
    "register": {
+        "button_register": "REGISTER NOW",
         "title": "Registration",
         "description": "Please check that your information is correct",
         "info_personal": "INFORMATION",
@@ -499,5 +501,11 @@
         "thnks_3": "Fantastic! you already have your access to DRONE INNOVATORS FORUM MX, Industrial Transformation Mexico and AMERICAS' MOBILITY OF THE FUTURE.",
         "thnks_4": "Soon you will receive a confirmation email!",
         "thnks_5": "Download your pass"
+    },
+    "hotels":{
+        "title": "Special Hotel Rates",
+        "description": "We are pleased to announce that we have secured preferential rates at quality hotels to make your experience even more comfortable and affordable.<br /><br />Strategically located around the event venue, these hotels offer not only comfort, but also the opportunity to fully immerse yourself in the atmosphere of the event. We have negotiated special rates for our attendees, ensuring that your stay will be as unforgettable as the event itself.",
+        "code_reservation": "Reservation code: HANNOVER",
+        "button": "Book now"
     }
 }

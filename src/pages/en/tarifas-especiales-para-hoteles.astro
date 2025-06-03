@@ -1,0 +1,133 @@
+---
+import i18next, { t, changeLanguage } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+import { hotels, Start } from "../../data/constans_hotels.js";
+
+changeLanguage("en");
+---
+
+<Layout title='DRONE | Hoteles'>
+  <main class='container mx-auto px-4 md:px-20 my-10'>
+    <h1 class='font-bold text-4xl'>{t('hotels.title')}</h1>
+    <p class='mt-5' set:html={t('hotels.description')} />
+    {
+      /* <p class='mt-5 font-extrabold text-3xl text-[#e8001e]'>
+      {t('hotels.code_reservation')}
+    </p>*/
+    }
+    <div class='mt-10 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
+      {
+        hotels.map((hotel) => {
+          return (
+            <div class='border rounded-xl shadow-xl '>
+              <img
+                src={hotel.src}
+                alt={hotel.name}
+                class='w-full h-64 object-cover rounded-t-xl'
+              />
+              <div class='p-4'>
+                <p class='font-bold text-gray-600'>{hotel.name}</p>
+                <p class='flex mt-3' set:html={Start(hotel.start)} />
+                <p class='mt-5'>{hotel.address}</p>
+                {/* <p class='flex mt-5'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke-width={1.5}
+                    stroke='currentColor'
+                    width={20}
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      d='M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3'
+                    />
+                  </svg>{' '}
+                  {hotel.phone_mexico}
+                  <br />
+                </p>
+                {hotel.phone_international === '' ? (
+                  ''
+                ) : (
+                  <p class='flex mt-5'>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      stroke-width={1.5}
+                      stroke='currentColor'
+                      width={20}
+                    >
+                      <path
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
+                        d='M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3'
+                      />
+                    </svg>
+                    {hotel?.phone_international}
+                  </p>
+                )}
+                {hotel.celular === '' ? (
+                  ''
+                ) : (
+                  <p class='flex mt-5'>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      stroke-width={1.5}
+                      stroke='currentColor'
+                      width={20}
+                    >
+                      <path
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
+                        d='M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3'
+                      />
+                    </svg>
+                    {hotel?.celular}
+                  </p>
+                )}
+                <p class='mt-5 border-y-2 py-2'>
+                  {i18next.language === 'en' ? hotel.rate_en : hotel.rate_es}
+                </p>
+                <p class='border-b-2 py-2' style={{ wordWrap: 'break-word' }}>
+                  <a
+                    href={`mailto:${hotel.email}`}
+                    class='text-blue-600 hover:text-[#DB00AE]'
+                  >
+                    {hotel.email}
+                  </a>
+                  <br />
+                  <a
+                    href={`mailto:${hotel.cc}`}
+                    class='text-blue-600 hover:text-[#DB00AE]'
+                  >
+                    {hotel?.cc}
+                  </a>
+                </p>*/}
+
+                <p class='flex mt-5'>
+                  <img src='/img/hoteles/walk_icon.webp' width={20} />{' '}
+                  {hotel.time_walk}
+                </p>
+                <p class='flex mt-5'>
+                  <img src='/img/hoteles/car-svgrepo-com.svg' width={20} />{' '}
+                  {hotel.time_car}
+                </p>
+                <a
+                  href={hotel.link}
+                  target='_blank'
+                  class='mt-5 bg-[#5F8CC1] text-white px-4 py-2 rounded-lg inline-block hover:bg-black'
+                >
+                  {t('hotels.button')}
+                </a>
+              </div>
+            </div>
+          )
+        })
+      }
+    </div>
+  </main>
+</Layout>

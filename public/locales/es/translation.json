@@ -5,7 +5,8 @@
         "exhibitors": "Expositor",
         "floor_plan": "PLANO DRONE 2025",
         "contract": "CONTRATO DRONE 2025",
-        "visitors": "Visitantes",
+        "visitors": "VISITANTES",
+        "visitors_profile": "Perfil del visitante",
         "register": "Registro"
     },
     "home": {
@@ -16,7 +17,7 @@
         "seconds": "segundos",
         "titleITM": "LA SEMANA MÁS IMPORTANTE DEL MUNDO DE LOS DRONES SE ACERCA",
         "credential": "Debes presentar una credencial de empresa para tener acceso a la feria",
-        "date_text_cost": "El registro abrirá el 1 junio y tendrá un costo de $300 pesos con IVA incluido",
+        "date_text_cost": "Registro abierto, tiene un costo de $300 pesos con IVA incluido.",
         "date": "11 y 13 de noviembre de 2025",
         "text_1": "Liberando el potencial aéreo:",
         "text_2": "El Mundo de los drones",
@@ -89,6 +90,7 @@
         "title-sponsors": "PATROCINADORES PLATINO"
     },
     "register": {
+        "button_register": "REGÍSTRATE AQUÍ",
         "title": "REGISTRO",
         "description": "Por favor revisa que tu información sea correcta",
         "info_personal": "INFORMACIÓN",
@@ -498,5 +500,11 @@
         "thnks_3": "¡Fantástico! ya tienes tu acceso para DRONE INNOVATORS FORUM MX, Industrial Transformation México y AMERICAS´ MOBILITY OF THE FUTURE",
         "thnks_4": "¡Pronto recibirás un correo de confirmación!",
         "thnks_5": "Descarga tu gafete"
+    },
+    "hotels":{
+        "title": "Tarifas especiales en hoteles",
+        "description": "Nos complace anunciar que hemos asegurado tarifas preferenciales en hoteles de calidad para que tu experiencia sea aún más cómoda y accesible.<br /><br />Ubicados estratégicamente alrededor del lugar del evento, estos hoteles ofrecen no solo comodidad, sino también la oportunidad de sumergirte completamente en la atmósfera del evento. Hemos negociado tarifas especiales para nuestros asistentes, asegurándonos de que tu estancia sea tan inolvidable como el propio evento.",
+        "code_reservation": "Codigo de reserva: HANNOVER",
+        "button": "Reservar ahora"
     }
 }
