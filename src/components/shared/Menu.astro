@@ -36,7 +36,10 @@ const menu: MenuItem[] = [
     items: [
       {
         title: 'Factsheet DRONE 2025',
-        href: '/files/FACTSHEET_compressed.pdf',
+        href:
+          lang === 'es'
+            ? '/files/FACTSHEET_compressed.pdf'
+            : '/files/FACTSHEET_eng_compressed.pdf',
         target: '_blank',
       },
       {
