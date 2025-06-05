@@ -257,10 +257,16 @@ export function StepFour({ translates, currentLanguage }) {
                   }}
                 />
 
+                <p
+                  className='mt-2'
+                  dangerouslySetInnerHTML={{
+                    __html: translates.instructions_text_5,
+                  }}
+                />
                 <div
                   className='border-2 border-green-700 text-green-700 rounded-lg p-3 mt-5'
                   dangerouslySetInnerHTML={{
-                    __html: translates.instructions_text_5,
+                    __html: translates.instructions_text_6,
                   }}
                 />
               </div>
