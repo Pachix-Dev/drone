@@ -490,7 +490,7 @@
         "instructions_text_2": "2. Da de alta la CLABE en esta ficha. <strong>El banco deberá de ser BanBajío.</strong>",
         "instructions_text_3": "3. Realiza la transferencia a nombre de <strong>IGECO </strong> por la cantidad exacta de esta ficha de lo contrario se rechazará el cargo.",
         "instructions_text_4": "4. Al confirmar tu pago, el portal de tu banco generará un comprobante digital, <strong>en el podrás verificar que se haya realizado correctamente, </strong> conserva este comprobante de pago.",
-        "instructions_text_5": "Al completar estos pasos envia un correo a <strong><a href='mailto:emmanuel.heredia@igeco.mx' target='_blank'>emmanuel.heredia@igeco.mx</a></strong> con el comprobante de pago, tu nombre completo y el correo electronico que usaste para el registro para que podamos validar tu pago y enviarte tu acceso.",
+        "instructions_text_5": "Al completar estos pasos envia un correo a <strong><a href='mailto:emmanuel.heredia@igeco.mx' target='_blank'>emmanuel.heredia@igeco.mx</a></strong> con el comprobante de pago, tu nombre completo, nombre del evento al que asistiras y el correo electronico que usaste para el registro para que podamos validar tu pago y enviarte tu acceso.",
         "copy": "Copiar",
         "copy_success": "Copiado"
     },
