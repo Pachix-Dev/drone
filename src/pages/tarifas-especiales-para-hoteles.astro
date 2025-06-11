@@ -116,13 +116,19 @@ changeLanguage("es");
                   <img src='/img/hoteles/car-svgrepo-com.svg' width={20} />{' '}
                   {hotel.time_car}
                 </p>
-                <a
-                  href={hotel.link}
-                  target='_blank'
-                  class='mt-5 bg-[#5F8CC1] text-white px-4 py-2 rounded-lg inline-block hover:bg-black'
-                >
-                  {t('hotels.button')}
-                </a>
+                {hotel.flyer_esp && (
+                  <a
+                    href={
+                      i18next.language === 'es'
+                        ? hotel.flyer_esp
+                        : hotel.flyer_eng
+                    }
+                    target='_blank'
+                    class='mt-5 bg-[#ED3C36] text-white px-4 py-2 rounded-lg inline-block hover:bg-black'
+                  >
+                    {t('hotels.info')}
+                  </a>
+                )}
               </div>
             </div>
           )

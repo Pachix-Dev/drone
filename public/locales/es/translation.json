@@ -506,6 +506,7 @@
         "title": "Tarifas especiales en hoteles",
         "description": "Nos complace anunciar que hemos asegurado tarifas preferenciales en hoteles de calidad para que tu experiencia sea aún más cómoda y accesible.<br /><br />Ubicados estratégicamente alrededor del lugar del evento, estos hoteles ofrecen no solo comodidad, sino también la oportunidad de sumergirte completamente en la atmósfera del evento. Hemos negociado tarifas especiales para nuestros asistentes, asegurándonos de que tu estancia sea tan inolvidable como el propio evento.",
         "code_reservation": "Codigo de reserva: HANNOVER",
-        "button": "Reservar ahora"
+        "button": "Reservar ahora",
+        "info": "Más información aquí"
     }
 }
