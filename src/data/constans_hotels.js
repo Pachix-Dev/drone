@@ -53,8 +53,8 @@ const hotels = [
       time_car: '31 min',
       start: 5,
       link: 'https://www.barcelo.com/es-mx/barcelo-mexico-reforma/',
-      flyer_esp: '/files/flyer_barcelo_eng.png',
-      flyer_eng: '/files/flyer_barcelo_esp.png'
+      flyer_esp: '/files/flyer_barcelo_esp.png',
+      flyer_eng: '/files/flyer_barcelo_eng.png'
     },
     /*        
     {
