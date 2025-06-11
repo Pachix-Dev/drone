@@ -37,7 +37,6 @@ const hotels = [
       flyer_esp: '/files/flyer_camino_real_esp.pdf',
       flyer_eng: '/files/flyer_camino_real_eng.pdf'
     },
-    /*
     {
       src: '/img/hoteles/BARCELO_REFORMA.webp',
       name: 'Barceló México Reforma',
@@ -53,9 +52,11 @@ const hotels = [
       time_walk: '1h 54min',
       time_car: '31 min',
       start: 5,
-      link: 'https://www.barcelo.com/es-mx/barcelo-mexico-reforma/'
+      link: 'https://www.barcelo.com/es-mx/barcelo-mexico-reforma/',
+      flyer_esp: '/files/flyer_barcelo_eng.png',
+      flyer_eng: '/files/flyer_barcelo_esp.png'
     },
-    
+    /*        
     {
       src: '/img/hoteles/KIMPTON_VIRGILIO.webp',
       name: 'Kimpton Virgilio Polanco',
