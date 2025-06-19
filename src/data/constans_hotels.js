@@ -56,6 +56,25 @@ const hotels = [
       flyer_esp: '/files/flyer_barcelo_esp.png',
       flyer_eng: '/files/flyer_barcelo_eng.png'
     },
+    {
+      src: '/img/hoteles/FIESTA_AMERICANA_TOREO.webp',
+      name: 'Fiesta Americana Mexico Toreo',
+      address: 'Blvd. Adolfo López Mateos 1308, Los Gavilanes, 37270 León, Gto.',
+      rate_es: '',
+      rate_en: '',
+      phone_international: '',
+      phone_mexico: '',
+      celular: '',
+      email: '',
+      cc:'',
+      code: 'HANNOVER',
+      time_walk: '28 min',
+      time_car: '8 min',
+      start: 5,
+      link: 'https://www.fiestamericanatravelty.com/fiesta-americana/hoteles/fiesta-americana-mexico-toreo',
+      flyer_esp: '/files/flyer_fiesta_americana_esp.png',
+      flyer_eng: '/files/flyer_fiesta_americana_eng.png'
+    },
     /*        
     {
       src: '/img/hoteles/KIMPTON_VIRGILIO.webp',
@@ -74,23 +93,7 @@ const hotels = [
       start: 4,
       link: 'https://www.kimptonvirgilio.com/us/en/'
     },
-    {
-      src: '/img/hoteles/FIESTA_AMERICANA_TOREO.webp',
-      name: 'Fiesta Americana Mexico Toreo',
-      address: 'Blvd. Adolfo López Mateos 1308, Los Gavilanes, 37270 León, Gto.',
-      rate_es: '',
-      rate_en: '',
-      phone_international: '',
-      phone_mexico: '',
-      celular: '',
-      email: '',
-      cc:'',
-      code: 'HANNOVER',
-      time_walk: '28 min',
-      time_car: '8 min',
-      start: 5,
-      link: 'https://www.fiestamericanatravelty.com/fiesta-americana/hoteles/fiesta-americana-mexico-toreo'
-    },
+    
     {
       src: '/img/hoteles/HYATT_TOREO.webp',
       name: 'Hyatt Regency Mexico City',
