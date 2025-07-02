@@ -75,6 +75,26 @@ const hotels = [
       flyer_esp: '/files/flyer_fiesta_americana_esp.png',
       flyer_eng: '/files/flyer_fiesta_americana_eng.png'
     },
+    {
+      src: '/img/hoteles/fiestaInn_naucalpan.webp',
+      name: 'Fiesta Inn Naucalpan',
+      address: 'Periférico Norte, Av. Dr. Gustavo Baz esq, Alce Blanco, 53370 Naucalpan de Juárez, Méx.',
+      rate_es: '',
+      rate_en: '',
+      phone_international: '',
+      phone_mexico: '',
+      celular: '',
+      email: '',
+      cc:'',
+      code: 'HANNOVER',
+      time_walk: '50 min',
+      time_car: '21 min',
+      start: 4,
+      link: 'https://www.fiestamericanatravelty.com/fiesta-inn/hoteles/fiesta-inn-naucalpan',
+      googlemaps: 'https://maps.app.goo.gl/yGpQRtkbuBaY9qce6',
+      flyer_esp: '/files/flyer_fiesta_inn_naucalpan_esp.webp',
+      flyer_eng: '/files/flyer_fiesta_inn_naucalpan_eng.webp'
+    },
     /*        
     {
       src: '/img/hoteles/KIMPTON_VIRGILIO.webp',

@@ -508,6 +508,14 @@
         "description": "Nos complace anunciar que hemos asegurado tarifas preferenciales en hoteles de calidad para que tu experiencia sea aún más cómoda y accesible.<br /><br />Ubicados estratégicamente alrededor del lugar del evento, estos hoteles ofrecen no solo comodidad, sino también la oportunidad de sumergirte completamente en la atmósfera del evento. Hemos negociado tarifas especiales para nuestros asistentes, asegurándonos de que tu estancia sea tan inolvidable como el propio evento.",
         "code_reservation": "Codigo de reserva: HANNOVER",
         "button": "Reservar ahora",
-        "info": "Más información aquí"
+        "info": "Más información aquí",
+        "visitplan": "PLANEA TU VISITA A DRONE INNOVATORS FORUM MX",
+        "visitplan_text": "RUTAS DEL AEROPUERTO INTERNACIONAL FELIPE ÁNGELES Y AEROPUERTO INTERNACIONAL DE LA CIUDAD DE MéXICO",
+        "visitplan_text_2": "Para que tu llegada sea rápida, accesible y segura; hemos investigado los diferentes opciones de rutas de transporte hacia cada uno de los aeropuertos de la Ciudad de México.",
+        "rentcar": "RENTA DE AUTOS",
+        "autobuses": "AUTOBUSES",
+        "aifapass": "AIFAPASS - Tarifa cero en peaje",
+        "destiny": "DESTINOS TERRESTES DE FORÁNEOS",
+        "airport": "Aeropuerto internacional"
     }
 }

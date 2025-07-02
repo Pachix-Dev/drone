@@ -509,6 +509,14 @@
         "description": "We are pleased to announce that we have secured preferential rates at quality hotels to make your experience even more comfortable and affordable.<br /><br />Strategically located around the event venue, these hotels offer not only comfort, but also the opportunity to fully immerse yourself in the atmosphere of the event. We have negotiated special rates for our attendees, ensuring that your stay will be as unforgettable as the event itself.",
         "code_reservation": "Reservation code: HANNOVER",
         "button": "Book now",
-        "info": "More information here"
+        "info": "More information here",
+        "visitplan": "PLAN YOUR VISIT TO DRONE INNOVATORS FORUM MX",
+        "visitplan_text": "FELIPE ANGELES INTERNATIONAL AIRPORT AND MEXICO CITY INTERNATIONAL AIRPORT ROUTES",
+        "visitplan_text_2": "To make your arrival fast, accessible and safe; we have researched the different options of transportation routes to each of the airports in Mexico City.",
+        "rentcar": "RENT A CAR",
+        "autobuses": "BUS",
+        "aifapass": "AIFAPASS - Zero toll rate",
+        "destiny": "LAND DESTINATIONS OF FOREIGNERS",
+        "airport": "International airport"
     }
 }
