@@ -168,22 +168,27 @@ export class RegisterModel {
     }
   }
 
-  static async save_order(user_id, paypal_id_order, paypal_id_transaction) {
+  static async save_order(user_id, paypal_id_order, paypal_id_transaction, id_code = 0) {
     const connection = await mysql.createConnection(config)
     try {
       const [registers] = await connection.query(
-        'INSERT INTO users_vip (user_id, paypal_id_order, paypal_id_transaction) VALUES (?,?,?)',
+        'INSERT INTO users_vip (user_id, paypal_id_order, paypal_id_transaction, id_code) VALUES (?,?,?,?)',
         [
           user_id,
           paypal_id_order,
           paypal_id_transaction,
+          id_code
         ]
       )
       return registers
+    } catch (error) {
+      console.log(error);
+      return hableError(error);
     } finally {
       await connection.end() // Close the connection
     }
   }
+
   static async get_user_by_id(id) {
     const connection = await mysql.createConnection(config)
     try {
@@ -205,6 +210,46 @@ export class RegisterModel {
       }
     } finally {
       await connection.end()
+    }
+  }
+
+  // check code cortesia
+  static async check_code_cortesia(code_cortesia) {
+    const connection = await mysql.createConnection(config);
+    try {
+      // Verifica si el código existe en codigos_cortesia
+      const [result] = await connection.query(
+        'SELECT * FROM codigos_cortesia WHERE code = ?',
+        [code_cortesia]
+      );
+      
+      if (result.length === 0) {
+        return {
+          status: false,
+          message: "Código invalido",
+        };
+      }
+
+      // Cuenta cuántas veces se ha usado el código en users_vip
+      const [countResult] = await connection.query(
+        'SELECT COUNT(*) as count FROM users_vip WHERE id_code = ?',
+        [result[0].id]
+      );
+
+      if (countResult[0].count >= result[0].max_use) {
+        return {
+          status: false,
+          message: "Código invalido",
+        };
+      }
+
+      return {
+        status: true,
+        result: result[0],
+      };
+
+    } finally {
+      await connection.end(); // Close the connection
     }
   }
 

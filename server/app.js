@@ -8,7 +8,7 @@ import { TemplateEmail } from './TemplateEmail.js';
 import { TemplateEmailEng } from './TemplateEmailEng.js';
 import { RegisterModel } from './db.js';
 import PDFDocument from 'pdfkit';
-import { generatePDFInvoice, generateQRDataURL } from './generatePdf.js';
+import { generatePDFInvoice, generateQRDataURL, generatePDF_freePass } from './generatePdf.js';
 import { Resend } from "resend";
 
 const { json } = pkg
@@ -388,14 +388,48 @@ app.post('/free-register', async (req, res) => {
     }
 });
 
-app.post('/create-order', (req, res) => {
+app.post('/create-order', async (req, res) => {
     const { body } = req;
 
-    if (body.total != 300) {
-        return res.status(500).send({
+    const BASE_PRICE = 300;
+    let expectedTotal = BASE_PRICE;
+
+    // Buscar si hay un descuento en items
+    const discountItem = body.items?.filter((item) => item?.isDiscount);
+    console.log(discountItem);
+
+    if (discountItem.length === 1) {
+        // Buscar el código en la base de datos
+        const codeData = await RegisterModel.check_code_cortesia(
+        discountItem[0].name
+        );
+        if (!codeData.status) {
+        return res.status(400).send({
             status: false,
-            message: 'Tu compra no pudo ser procesada, la información no es valida...'
+            message: "El código de descuento no es válido.",
         });
+        }
+
+        // Calcular el descuento
+        const discount = BASE_PRICE * (codeData.result.discount_percent / 100);
+        expectedTotal = BASE_PRICE - discount;
+
+        // Validar que el total recibido sea igual al esperado
+        if (body.total !== expectedTotal) {
+        return res.status(400).send({
+            status: false,
+            message: "El total enviado no coincide con el descuento aplicado.",
+        });
+        }
+    } else {
+        // Si no hay descuento, validar que el total sea igual al precio base
+        if (body.total !== BASE_PRICE) {
+        return res.status(400).send({
+            status: false,
+            message:
+            "Tu compra no pudo ser procesada, la información no es valida...",
+        });
+        }
     }
 
     get_access_token()
@@ -453,13 +487,17 @@ app.post('/complete-order', async (req, res) => {
             }
         });
 
+        // buscar el id del cupon de descuento si existe
+        const discountItem = body.items?.find((item) => item?.isDiscount);
+        const id_code = discountItem ? discountItem.id : null;
+
         const json = await response.json();
         console.log(JSON.stringify(json));
         if (json.id) {
             if (json.purchase_units[0].payments.captures[0].status === 'COMPLETED' || json.purchase_units[0].payments.captures[0].status === 'PENDING') {
                 const paypal_id_order = json.id;
                 const paypal_id_transaction = json.purchase_units[0].payments.captures[0].id;
-                await RegisterModel.save_order(body.user_id, paypal_id_order, paypal_id_transaction);
+                await RegisterModel.save_order(body.user_id, paypal_id_order, paypal_id_transaction, id_code);
                 const pdfAtch = await generatePDFInvoice(paypal_id_transaction, body, userResponse.user.uuid);
                 const mailResponse = await sendEmailRegistro(body, pdfAtch, paypal_id_transaction);
 
@@ -481,6 +519,54 @@ app.post('/complete-order', async (req, res) => {
             message: 'hubo un error al procesar tu compra, por favor intenta mas tarde...'
         });
     }
+});
+
+app.post("/check-cortesia", async (req, res) => {
+  const { body } = req;
+
+  const response = await RegisterModel.check_code_cortesia(body.code_cortesia);
+
+  if (response.status) {
+    if (response.result.discount_percent === 100) {
+      const userResponse = await RegisterModel.get_user_by_id(body.user_id);
+
+      if (!userResponse.status) {
+        return res.status(404).send({
+          message: userResponse.error,
+        });
+      }
+
+      await RegisterModel.save_order(
+        body.user_id,
+        response.result.code,
+        response.result.code,
+        response.result.id
+      );
+
+      const pdfAtch = await generatePDF_freePass(body, userResponse.user.uuid);
+
+      const mailResponse = await sendEmail(
+        body,
+        pdfAtch,
+        userResponse.user.uuid
+      );
+
+      return res.send({
+        ...mailResponse,
+        invoice: `${userResponse.user.uuid}.pdf`,
+        next: true,
+      });
+    }
+
+    return res.send({
+      status: true,
+      result: response.result,
+    });
+  } else {
+    res.status(400).send({
+      message: response.message,
+    });
+  }
 });
 
 function get_access_token() {

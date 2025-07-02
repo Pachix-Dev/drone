@@ -41,7 +41,7 @@ const useRegisterForm = create(
             invoiceDownToLoad: "",
             items: [
                 {
-                    id: 1,
+                    id: 0,
                     name: "Costo del acceso",
                     name_en: "Access cost",
                     price: 300,
@@ -97,6 +97,24 @@ const useRegisterForm = create(
             setInvoiceDownToLoad: (invoiceDownToLoad) => set({ invoiceDownToLoad }),
             setCode_cortesia: (code_cortesia) => set({ code_cortesia }),
 
+            addDiscount: (discount) =>
+                set((state) => {
+                    const exists = state.items.some((item) => item.id === discount.id);
+                    if (exists) return state;
+
+                    const exists_discount = state.items.some(
+                        (item) => discount.isDiscount === item.isDiscount
+                    );
+                    if (exists_discount) return state;
+
+                    const newTotal = state.total - discount.price;
+                    return {
+                        items: [...state.items, discount],
+                        total: newTotal,
+                    };
+                }
+            ),
+
             incrementStep: () => set((state) => ({
                 step: state.step + 1
             })),
@@ -139,10 +157,30 @@ const useRegisterForm = create(
                 levelInfluence: "",
                 wannaBeExhibitor: "",
                 alreadyVisited: [],
-                code_cortesia: ""
+                code_cortesia: "",
+
+                items: [
+                    {
+                    id: 0,
+                    name: "Costo del acceso",
+                    name_en: "Access cost",
+                    price: 300,
+                    included: [
+                        "Acceso a la feria los 3 días del evento",
+                        "Acceso a conferencias Leaders of Tomorrow",
+                        "Acceso a conferencias Transformation Area",
+                    ],
+                    included_en: [
+                        "Access to the fair for 3 days of the event",
+                        "Access to Leaders of Tomorrow conferences",
+                        "Access to Transformation Area conferences",
+                    ],
+                    },
+                ],
+                total: 300,
             })
         }),
-        { name: "register-form-drone-new-2" }
+        { name: "register-form-drone-new-3" }
     )
 )
 

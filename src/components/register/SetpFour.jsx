@@ -8,6 +8,7 @@ import {
 } from '@paypal/react-paypal-js'
 import { Resume } from './Resume.jsx'
 import { Total } from './Total.jsx'
+import { Coupon } from './Coupon.jsx'
 
 export function StepFour({ translates, currentLanguage }) {
   const {
@@ -68,6 +69,7 @@ export function StepFour({ translates, currentLanguage }) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
+        items,
         total: total,
       }),
     })
@@ -273,9 +275,12 @@ export function StepFour({ translates, currentLanguage }) {
             )}
           </div>
         </div>
-        <div className='border-2 rounded-xl flex flex-col justify-between bg-white text-black'>
-          <Resume currentLanguage={currentLanguage} />
-          <Total />
+        <div className='  flex flex-col justify-between gap-5'>
+          <Coupon currentLanguage={currentLanguage} />
+          <div className='border-2 rounded-xl flex flex-col justify-between bg-white text-black'>
+            <Resume currentLanguage={currentLanguage} />
+            <Total />
+          </div>
         </div>
       </div>
       <div className='flex justify-between'>
