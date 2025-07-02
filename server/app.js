@@ -545,7 +545,7 @@ app.post("/check-cortesia", async (req, res) => {
 
       const pdfAtch = await generatePDF_freePass(body, userResponse.user.uuid);
 
-      const mailResponse = await sendEmail(
+      const mailResponse = await sendEmailRegistro(
         body,
         pdfAtch,
         userResponse.user.uuid
