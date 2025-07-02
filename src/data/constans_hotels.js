@@ -95,6 +95,26 @@ const hotels = [
       flyer_esp: '/files/flyer_fiesta_inn_naucalpan_esp.webp',
       flyer_eng: '/files/flyer_fiesta_inn_naucalpan_eng.webp'
     },
+    {
+      src: '/img/hoteles/HYATT_TOREO.webp',
+      name: 'Hyatt Regency Mexico City',
+      address: 'Campos Elíseos 204, Polanco Chapultepec, Ciudad de México 11560',
+      rate_es: '',
+      rate_en: '',
+      phone_international: '',
+      phone_mexico: '',
+      celular: '',
+      email: '',
+      cc:'',
+      code: 'HANNOVER',
+      time_walk: '59 min',
+      time_car: '25 min',
+      start: 5,
+      link: 'https://www.hyatt.com/en-US/group-booking/MEXHR/G-RQ93',
+      googlemaps: 'https://maps.app.goo.gl/inQFo3jX5AaYAn1HA',
+      flyer_esp: 'https://www.hyatt.com/en-US/group-booking/MEXHR/G-RQ93',
+      flyer_eng: 'https://www.hyatt.com/en-US/group-booking/MEXHR/G-RQ93'
+    },
     /*        
     {
       src: '/img/hoteles/KIMPTON_VIRGILIO.webp',
@@ -114,23 +134,7 @@ const hotels = [
       link: 'https://www.kimptonvirgilio.com/us/en/'
     },
     
-    {
-      src: '/img/hoteles/HYATT_TOREO.webp',
-      name: 'Hyatt Regency Mexico City',
-      address: 'Campos Elíseos 204, Polanco Chapultepec, Ciudad de México 11560',
-      rate_es: '',
-      rate_en: '',
-      phone_international: '',
-      phone_mexico: '',
-      celular: '',
-      email: '',
-      cc:'',
-      code: 'HANNOVER',
-      time_walk: '59 min',
-      time_car: '14 min',
-      start: 5,
-      link: 'https://www.guestreservations.com/es/hyatt-regency-mexico-city/booking?msclkid=41bcf879b3041a05f64e904ede3ec903'
-    },*/
+    ,*/
     
   ]
   
