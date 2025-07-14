@@ -8,6 +8,7 @@ import Category from "@/components/home/Category.astro";
 import { BlurFade } from "@/components/ui/blur-fade";
 import Visitor from "@/components/home/Visitor.astro";
 import FreeRegister from "@/components/home/FreeRegister.astro";
+import Exihitors from "@/components/home/Exihitors.astro";
 
 changeLanguage("es");
 ---
@@ -25,10 +26,12 @@ changeLanguage("es");
     </lite-youtube>
   </section>
   <Welcome />
+
   <Visitor />
   <BlurFade delay={1} inView direction={'up'} client:only>
     <Category />
   </BlurFade>
+  <Exihitors />
 </Layout>
 <script>
   import '@justinribeiro/lite-youtube'

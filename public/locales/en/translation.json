@@ -10,7 +10,9 @@
         "register": "Register"
     },
     "home": {
-        "proximo": "Comming soon...",
+        "exhibitors": "Confirmed Exhibitors",
+        "others": "among others...",
+        "proximo": "Coming soon...",
         "days": "days",
         "hours": "hours",
         "minutes": "minutes",

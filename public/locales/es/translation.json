@@ -10,6 +10,8 @@
         "register": "Registro"
     },
     "home": {
+        "exhibitors": "Expositores Confirmados",
+        "others": "entre otros...",
         "proximo": "Próximamente...",
         "days": "días",
         "hours": "horas",

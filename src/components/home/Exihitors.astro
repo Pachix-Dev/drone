@@ -1,0 +1,28 @@
+---
+import { t } from 'i18next'
+import { exhibitors } from '../../data/constans_logos.js'
+---
+
+<section class='my-20 container mx-auto px-4'>
+  <p class='text-4xl md:text-8xl font-bold mb-6 text-center'>
+    {t('home.exhibitors')}
+  </p>
+
+  <div class='mt-10 grid grid-cols-2 sm:grid-cols-3 gap-4'>
+    {
+      exhibitors.map((exhibitor) => (
+        <div class='flex justify-center items-center p-4'>
+          <img
+            src={exhibitor.src}
+            alt={exhibitor.alt}
+            width={exhibitor.width}
+            class='max-w-full h-auto'
+          />
+        </div>
+      ))
+    }
+  </div>
+  <p class='text-right text-4xl font-bold mt-4'>
+    {t('home.others')}
+  </p>
+</section>
