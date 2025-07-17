@@ -59,7 +59,7 @@ const hotels = [
     {
       src: '/img/hoteles/FIESTA_AMERICANA_TOREO.webp',
       name: 'Fiesta Americana Mexico Toreo',
-      address: 'Blvd. Adolfo López Mateos 1308, Los Gavilanes, 37270 León, Gto.',
+      address: 'Blvd. Manuel Ávila Camacho no.5, Lomas de Sotelo. C.P. 53390',
       rate_es: '',
       rate_en: '',
       phone_international: '',
