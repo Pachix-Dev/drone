@@ -143,7 +143,8 @@ async function generatePDFInvoice(paypal_id_transaction, body, uuid) {
         .text("- USO DE CFDI", 55)
         .text("* FECHA MÁXIMA DE FACTURACIÓN 25 DE NOVIEMBRE DE 2025")
 
-    const qrMainUser = await generateQRDataURL(uuid);
+    const textQr = body.typeRegister === 'VISITANTE' ? '@DIF_VIS'+body.user_id+'||||' : '@DIF_PRE'+body.user_id+'||||';
+    const qrMainUser = await generateQRDataURL(textQr);
     doc.addPage();
     // Draw a dashed cross in the middle of the document
     const midX = doc.page.width / 2;
@@ -332,9 +333,10 @@ async function generatePDF_freePass( body, uuid) {
     const doc = new PDFDocument();
     const pdfStream = fs.createWriteStream(pdfSave);            
     
-    doc.pipe(pdfStream);             
-    
-    const qrMainUser = await generateQRDataURL(uuid);
+    doc.pipe(pdfStream); 
+
+    const textQr = body.typeRegister === 'VISITANTE' ? '@DIF_VIS'+body.user_id+'||||' : '@DIF_PRE'+body.user_id+'||||';
+    const qrMainUser = await generateQRDataURL(textQr);
    
     // Draw a dashed cross in the middle of the document
     const midX = doc.page.width / 2;
