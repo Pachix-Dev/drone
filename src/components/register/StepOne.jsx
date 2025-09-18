@@ -257,7 +257,7 @@ export function StepOne({ translates }) {
       </div>
 
       <div className='grid grid-cols-2 gap-6'>
-        <div>
+        {/*<div>
           <p className='mt-5 text-white'>{translates.surname}</p>
           <div className='relative mt-2'>
             <input
@@ -308,6 +308,41 @@ export function StepOne({ translates }) {
             </p>
           )}
         </div>
+        */}
+        <div>
+          <p className='mt-5 text-white'>{translates.code_invitation}</p>
+          <div className='relative mt-2 '>
+            <input
+              type='text'
+              {...register('code_invitation', {
+                onChange: (e) => setCodeInvitation(e.target.value),
+              })}
+              name='code_invitation'
+              id='code_invitation'
+              className='w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm shadow-sm'
+              placeholder={translates.placeholder_code_invitation}
+              autoComplete='code_invitation'
+              defaultValue={code_invitation}
+            />
+
+            <span className='absolute inset-y-0 end-0 grid place-content-center px-4'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 24 24'
+                strokeWidth={1.5}
+                stroke='currentColor'
+                className='h-4 w-4 text-gray-400'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  d='M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5-3.9 19.5m-2.1-19.5-3.9 19.5'
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
 
         <div>
           <p className='mt-5 text-white'>
@@ -353,43 +388,6 @@ export function StepOne({ translates }) {
             <p className='text-[#ffe200] font-light'>{errors.email.message}</p>
           )}
         </div>
-
-        {/*
-        <div>
-          <p className='mt-5 text-white'>{translates.code_invitation}</p>
-          <div className='relative mt-2 '>
-            <input
-              type='text'
-              {...register('code_invitation', {
-                onChange: (e) => setCodeInvitation(e.target.value),
-              })}
-              name='code_invitation'
-              id='code_invitation'
-              className='w-full rounded-lg bg-transparent border border-gray-200 p-4 pe-12 text-sm shadow-sm'
-              placeholder={translates.placeholder_code_invitation}
-              autoComplete='code_invitation'
-              defaultValue={code_invitation}
-            />
-
-            <span className='absolute inset-y-0 end-0 grid place-content-center px-4'>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 24 24'
-                strokeWidth={1.5}
-                stroke='currentColor'
-                className='h-4 w-4 text-gray-400'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  d='M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5-3.9 19.5m-2.1-19.5-3.9 19.5'
-                />
-              </svg>
-            </span>
-          </div>
-        </div>
-        */}
       </div>
       <div className='grid grid-cols-2 gap-6'>
         <div>
