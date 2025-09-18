@@ -594,6 +594,40 @@ function get_access_token() {
         })
 }
 
+app.post("/bulk-send", async (req, res) => {
+  try {
+    const users = await RegisterModel.get_all_users_to_send();
+    console.log(`Total de correos a enviar: ${users.length}`);
+
+    for (let i = 0; i < users.length; i++) {
+      const user = users[i];
+
+      try {
+        const pdfAtch = await generatePDF_freePass(user, user.uuid);
+        await sendEmailRegistro(user, pdfAtch, user.uuid);
+
+        console.log(`✅ Enviado a: ${user.email}`);
+      } catch (err) {
+        console.error(`❌ Error en ${user.email}:`, err.message);
+      }
+
+      // Resend permite 2 req/seg, aquí mando 1 cada 600ms aprox
+      await new Promise((resolve) => setTimeout(resolve, 600));
+    }
+
+    return res.send({
+      status: true,
+      message: "Proceso de envío masivo completado",
+    });
+  } catch (err) {
+    console.error(err);
+    return res.status(500).send({
+      status: false,
+      message: "Error en el envío masivo",
+    });
+  }
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)
 })

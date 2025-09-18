@@ -253,4 +253,15 @@ export class RegisterModel {
     }
   }
 
+  static async get_all_users_to_send() {
+    const connection = await mysql.createConnection(config);
+    const [rows] = await connection.query(`
+      SELECT 
+        id AS user_id,
+        users.*
+      FROM users
+    `);
+    return rows;
+  }
+  
 }
