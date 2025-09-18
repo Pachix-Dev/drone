@@ -180,7 +180,7 @@ const useRegisterForm = create(
                 total: 300,
             })
         }),
-        { name: "register-form-drone-new-3" }
+        { name: "register-form-drone-new-3-free" }
     )
 )
 
