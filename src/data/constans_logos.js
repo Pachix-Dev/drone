@@ -6,6 +6,7 @@ const exhibitors = [
     { src: '/img/airmobolity_footer.png', alt: 'Air Mobility', width: 250 },
     { src: '/img/exhibitors/rocadefense.webp', alt: 'Roca Defense', width: 200 },
     { src: '/img/exhibitors/imagov2.webp', alt: 'Imago', width: 200 },
+    { src: '/img/exhibitors/geoearth.webp', alt: 'geoearth', width: 220 },
 ]
 
 
