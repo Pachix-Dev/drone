@@ -7,6 +7,9 @@ const exhibitors = [
     { src: '/img/exhibitors/rocadefense.webp', alt: 'Roca Defense', width: 200 },
     { src: '/img/exhibitors/imagov2.webp', alt: 'Imago', width: 200 },
     { src: '/img/exhibitors/geoearth.webp', alt: 'geoearth', width: 220 },
+    { src: '/img/exhibitors/aeroindustrial.webp', alt: 'Aeroindustrial', width: 200 },
+    { src: '/img/exhibitors/infoaviacion.webp', alt: 'Infoaviacion', width: 200 },
+    { src: '/img/exhibitors/geoespectral.webp', alt: 'Geoespectral', width: 250 },
 ]
 
 
