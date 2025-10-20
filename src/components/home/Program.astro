@@ -88,7 +88,11 @@ const language = i18next.language;
 
                       <!-- Descripción -->
                       <div class="text-white/90 text-base md:text-lg leading-relaxed">
-                        {event.description && <p>{event.description_en}</p>}
+                        {
+                          i18next.language === "es"
+                            ? event.description_es
+                            : event.description_en
+                        }
                       </div>
                     </div>
 
