@@ -9,6 +9,7 @@ import { BlurFade } from "@/components/ui/blur-fade";
 import Visitor from "@/components/home/Visitor.astro";
 import FreeRegister from "@/components/home/FreeRegister.astro";
 import Exihitors from "@/components/home/Exihitors.astro";
+import Program from "@/components/home/Program.astro";
 
 changeLanguage("en");
 ---
@@ -31,6 +32,7 @@ changeLanguage("en");
   <BlurFade delay={1} inView direction={'up'} client:only>
     <Category />
   </BlurFade>
+  <Program />
   <Exihitors />
 </Layout>
 <script>
