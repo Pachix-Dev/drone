@@ -110,6 +110,13 @@ const language = i18next.language;
                                 <h5 class="font-semibold text-white text-sm md:text-base">
                                   {speaker.name}
                                 </h5>
+                                 <p class="text-white/70 text-xs md:text-sm">
+                                  {
+                                    i18next.language === "es"
+                                      ? speaker.position
+                                      : speaker.position_en
+                                  }
+                                </p>
                                 <p class="text-white/70 text-xs md:text-sm">
                                   {language === "es" ? 'Ponente' : 'Speaker'}
                                 </p>
