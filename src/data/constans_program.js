@@ -19,7 +19,7 @@ export const programs = [
         description: "En un mundo donde la precisión y la eficiencia son clave, Pix4D ofrece un ecosistema completo que conecta cada etapa del flujo de trabajo: desde la captura de datos con drones o cámaras, hasta la creación de gemelos digitales precisos listos para análisis, colaboración y toma de decisiones. Con una suite de soluciones integradas, Pix4D permite transformar imágenes en información geoespacial confiable, optimizando procesos en topografía, construcción, agricultura, minería y más. Todo dentro de un solo ecosistema que garantiza continuidad, calidad y resultados medibles.",
         description_en: "In a world where precision and efficiency are paramount, Pix4D offers a comprehensive ecosystem that connects every stage of the workflow: from data capture with drones or cameras to the creation of accurate digital twins ready for analysis, collaboration, and decision-making. With an integrated suite of solutions, Pix4D enables the transformation of images into reliable geospatial information, optimizing processes in surveying, construction, agriculture, mining, and more. All within a single ecosystem that ensures continuity, quality, and measurable results.",
         time: "12:15 hrs",
-        duration: "45 min",
+        duration: "40 min",
         speakers: [
             {
                 id: "1",
@@ -72,7 +72,7 @@ export const programs = [
         description: "GeoField: Tecnología que revela lo invisible en la agricultura moderna” es una conferencia que muestra cómo los drones multiespectrales y el análisis de datos están transformando la forma de entender el campo. A través de imágenes que capturan lo que el ojo humano no puede ver, GeoField permite detectar estrés hídrico, deficiencias nutricionales y afectaciones tempranas antes de que impacten la producción. La charla expone casos reales, beneficios económicos y el futuro de la agricultura basada en datos. Es una invitación a los productores y técnicos a adoptar decisiones precisas, sustentadas en evidencia científica y tecnología avanzada.",
         description_en: "GeoField: Technology that Reveals the Invisible in Modern Agriculture” is a conference that shows how multispectral drones and data analysis are transforming the way we understand the field. Through images that capture what the human eye cannot see, GeoField allows for the detection of water stress, nutritional deficiencies, and early impacts before they affect production. The talk presents real cases, economic benefits, and the future of data-driven agriculture. It is an invitation for producers and technicians to make precise decisions based on scientific evidence and advanced technology.",
         time: "16:10 hrs",
-        duration: "35 min",
+        duration: "45 min",
         speakers: [
           {
                 id: "1",
