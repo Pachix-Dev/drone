@@ -14,6 +14,29 @@ export const programs = [
         speakers: [],
       },
       {
+          title: "Trimble CenterPoint RTX: Revolucionando el Mapeo y la Navegación de Precisión para Drones ",
+          title_en: "From the Field to the Digital Twin: A Single Pix4D Ecosystem",
+          description: "Esta sesión se centra en la Cartografía de Alta Precisión y Eficiencia para Drones, impulsada por la tecnología Trimble CenterPoint RTX. La clave reside en la combinación de la APX RTX GNSS/Inercial (con IN-Fusion+ y calibración SmartCal) y el post-procesado Applanix POSPac UAV PP-RTX 2. Esta solución ofrece precisión centimétrica a nivel global, operando en un Datum Global Consistente y cumpliendo con la Fiabilidad Certificada ASIL-B. El sistema asegura ultra robustez y resultados sin artefactos, eliminando la necesidad de infraestructura terrestre. Finalizaremos con una revisión de casos prácticos que demuestran la precisión y eficiencia del PP-RTX 2 en proyectos LiDAR e hiperspectrales.",
+          description_en: " This session focuses on High-Precision and Efficient Mapping for Drones, powered by Trimble CenterPoint RTX technology. The key lies in the combination of APX RTX GNSS/Inertial (with IN-Fusion+ and SmartCal calibration) and post-processing with Applanix POSPac UAV PP-RTX 2. This solution offers centimeter-level accuracy globally, operating on a Consistent Global Datum and meeting ASIL-B Certified Reliability. The system ensures ultra robustness and artifact-free results, eliminating the need for ground infrastructure. We will conclude with a review of practical cases demonstrating the accuracy and efficiency of PP-RTX 2 in LiDAR and hyperspectral projects.",
+          time: "11:30 hrs",
+          duration: "40 min",
+          speakers: [
+              {
+                  id: "1",
+                  name: "Jesús Ruíz",
+                  position: "Gerente de Desarrollo de Negocios  - Airborne",
+                  position_en: "Business Development Manager - Airborne",
+                  company: "Trimble Applanix",
+                  bio: "Pionero en la introducción del posicionamiento preciso para la cartografía y navegación profesional con drones. En Trimble Applanix, lidero el crecimiento de la tecnología de posicionamiento para mercados aéreos en Europa y Latinoamérica. Impulso activamente su adopción en sectores clave como agricultura, servicios públicos, teledetección y construcción. Mi enfoque está en hacer realidad la cartografía y navegación fidedigna con drones. Cientos de empresas confían en Trimble Applanix para generar datos geoespaciales de alta fiabilidad que transforman la forma en que entendemos y gestionamos nuestro",
+                  bio_en: "Pioneer in introducing precise positioning for professional mapping and navigation with drones. At Trimble Applanix, I lead the growth of positioning technology for aerial markets in Europe and Latin America. I actively drive its adoption in key sectors such as agriculture, utilities, remote sensing, and construction. My focus is on making reliable mapping and navigation with drones a reality. Hundreds of companies trust Trimble Applanix to generate highly reliable geospatial data that transforms how we understand and manage our world.",
+                  image: "/img/speakers/jesus_ruiz.jpeg",
+                  email: "",
+                  phone: "",
+                  moderador: true
+              },
+          ]
+      },
+      {
         title: "Del terreno al gemelo digital: un solo ecosistema Pix4D ",
         title_en: "From the Field to the Digital Twin: A Single Pix4D Ecosystem",
         description: "En un mundo donde la precisión y la eficiencia son clave, Pix4D ofrece un ecosistema completo que conecta cada etapa del flujo de trabajo: desde la captura de datos con drones o cámaras, hasta la creación de gemelos digitales precisos listos para análisis, colaboración y toma de decisiones. Con una suite de soluciones integradas, Pix4D permite transformar imágenes en información geoespacial confiable, optimizando procesos en topografía, construcción, agricultura, minería y más. Todo dentro de un solo ecosistema que garantiza continuidad, calidad y resultados medibles.",
@@ -61,6 +84,7 @@ export const programs = [
       },
     ],
   },
+ 
   {
     day: 2,
     date: "13 de noviembre",
