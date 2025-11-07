@@ -1,3 +1,4 @@
+import src from "node_modules/astro-i18next/src"
 
   
 const exhibitors = [
@@ -12,6 +13,8 @@ const exhibitors = [
     { src: '/img/exhibitors/geoespectral.webp', alt: 'Geoespectral', width: 250 },
     { src: '/img/exhibitors/pix4d.png', alt: 'Pix4D', width: 200 },
     { src: '/img/exhibitors/space_drone_show.png', alt: 'space drone show', width: 200 },
+    { src: '/img/exhibitors/Logo_Trimble.png', alt: 'TRIMBLE', width: 200 },
+    { src: '/img/exhibitors/Logo_BS_Vector.png', alt: 'BS Vector', width: 80 },
 ]
 
 
