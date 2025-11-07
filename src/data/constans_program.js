@@ -19,7 +19,7 @@ export const programs = [
           description: "Esta sesión se centra en la Cartografía de Alta Precisión y Eficiencia para Drones, impulsada por la tecnología Trimble CenterPoint RTX. La clave reside en la combinación de la APX RTX GNSS/Inercial (con IN-Fusion+ y calibración SmartCal) y el post-procesado Applanix POSPac UAV PP-RTX 2. Esta solución ofrece precisión centimétrica a nivel global, operando en un Datum Global Consistente y cumpliendo con la Fiabilidad Certificada ASIL-B. El sistema asegura ultra robustez y resultados sin artefactos, eliminando la necesidad de infraestructura terrestre. Finalizaremos con una revisión de casos prácticos que demuestran la precisión y eficiencia del PP-RTX 2 en proyectos LiDAR e hiperspectrales.",
           description_en: " This session focuses on High-Precision and Efficient Mapping for Drones, powered by Trimble CenterPoint RTX technology. The key lies in the combination of APX RTX GNSS/Inertial (with IN-Fusion+ and SmartCal calibration) and post-processing with Applanix POSPac UAV PP-RTX 2. This solution offers centimeter-level accuracy globally, operating on a Consistent Global Datum and meeting ASIL-B Certified Reliability. The system ensures ultra robustness and artifact-free results, eliminating the need for ground infrastructure. We will conclude with a review of practical cases demonstrating the accuracy and efficiency of PP-RTX 2 in LiDAR and hyperspectral projects.",
           time: "11:30 hrs",
-          duration: "40 min",
+          duration: "20 min",
           speakers: [
               {
                   id: "1",
@@ -36,6 +36,29 @@ export const programs = [
               },
           ]
       },
+      {
+        title: "Fundamentos de la tecnología hiperespectral. Caso de éxito en Latinoamérica",
+        title_en: "From the Field to the Digital Twin: A Single Pix4D Ecosystem",
+        description: "Los sensores hiperespectrales producen imágenes en la que cada pixel contiene la firma espectral del objeto en la escena, esto es, la intensidad con la que se refleja la luz en cada longitud de onda. Dado que esta firma espectral se ve influenciada por las propiedades químicas de los objetos, la tecnología hiperespectral permite, por lo tanto, extraer información química de una escena de manera remota y no invasiva. Cuando un sensor hiperespectral de estas características, se combina con un sistema de medición y análisis inercial (como las tarjetas APX y el software Pospac UAV de Applanix, respectivamente), se posibilita un amplio abanico de aplicaciones en numerosos sectores: medioambiente, minería, oil and gas, civil, defensa, etc. En la presente ponencia conoceremos los fundamentos de la tecnología hiperespectral, así como varios casos éxitos llevados a cabo en Latinoamérica.",
+        description_en: " This session focuses on High-Precision and Efficient Mapping for Drones, powered by Trimble CenterPoint RTX technology. The key lies in the combination of APX RTX GNSS/Inertial (with IN-Fusion+ and SmartCal calibration) and post-processing with Applanix POSPac UAV PP-RTX 2. This solution offers centimeter-level accuracy globally, operating on a Consistent Global Datum and meeting ASIL-B Certified Reliability. The system ensures ultra robustness and artifact-free results, eliminating the need for ground infrastructure. We will conclude with a review of practical cases demonstrating the accuracy and efficiency of PP-RTX 2 in LiDAR and hyperspectral projects.",
+        time: "11:50 hrs",
+        duration: "20 min",
+        speakers: [
+            {
+                id: "1",
+                name: "Juan Manuel González",
+                position: "CEO",
+                position_en: "CEO",
+                company: "Black Square SAS",
+                bio: "Juan Manuel González Otero es máster en Ingeniería Aeronáutica por la Universidad Politécnica de Madrid, así como co-fundador y CEO de la empresa Black Square SAS. Con una amplia trayectoria de más de 10 años liderando un equipo de ingeniería altamente cualificado, ha tenido la oportunidad de participar en proyectos que han sido pioneros en el uso de la tecnología hiperespectral en Latinoamérica.",
+                bio_en: "Juan Manuel González Otero holds a master's degree in Aeronautical Engineering from the Polytechnic University of Madrid, as well as being co-founder and CEO of Black Square SAS. With an extensive career of over 10 years leading a highly qualified engineering team, he has had the opportunity to participate in projects that have been pioneers in the use of hyperspectral technology in Latin America.",
+                image: "/img/speakers/Juan_Manuel_Gonzalez.jpg",
+                email: "",
+                phone: "",
+                moderador: true
+            },
+        ]
+    },
       {
         title: "Del terreno al gemelo digital: un solo ecosistema Pix4D ",
         title_en: "From the Field to the Digital Twin: A Single Pix4D Ecosystem",
