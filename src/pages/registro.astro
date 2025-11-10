@@ -29,18 +29,27 @@ const currentLanguage = i18next.language;
       <h1 class='text-center font-extrabold text-4xl'>
         {t('register.title')}
       </h1>
-      {
-        /* <p class='mt-5 text-white text-xl pe-5 text-center'>
-        * {t('home.date_text_cost')}
+      <p class='mt-5 text-center text-2xl font-bold text-yellow-500'>
+        {t('register.description_student')}
       </p>
-      */
-      }
+      <p class='mt-5 text-white text-xl pe-5 text-center'>
+        * {t('home.register_finish')}
+        {t('home.date_text_cost')}
+      </p>
+      <p class='font-extrabold text-white text-3xl text-center'>
+        {t('home.date')}
+      </p>
+      <p class='text-white text-xl pe-5 text-center'>CENTRO BANAMEX, CDMX</p>
     </div>
-    <RegisterForm
+    {
+      /*
+      <RegisterForm
       translates={registerTranslations}
       currentLanguage={currentLanguage}
       client:only='react'
     />
+    */
+    }
   </main>
 </LayoutRegister>
 <style>

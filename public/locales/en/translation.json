@@ -92,12 +92,14 @@
         "text_68": "Universities",
         "title-sponsors": "SPONSORS PLATINIUM",
         "prensa": "If you are a member of the press, please send a request to the following e-mail address:",
-        "program_1": "CONFERENCE PROGRAM 2025"
+        "program_1": "CONFERENCE PROGRAM 2025",
+         "register_finish": "Online registration has ended, you can register on site,"
     },
    "register": {
         "button_register": "REGISTER NOW",
         "title": "Registration",
         "description": "Please check that your information is correct",
+        "description_student": "Free access for students is only valid on November 13 from 15:00 hrs. to 17:00 hrs.",
         "info_personal": "INFORMATION",
         "info_company": "COMPANY",
         "survey": "SURVEY",

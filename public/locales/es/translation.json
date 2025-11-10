@@ -92,12 +92,14 @@
         "text_68": "Universidades",
         "title-sponsors": "PATROCINADORES PLATINO",
         "prensa": "Si eres miembro de prensa favor de enviar una solicitud al siguiente correo:",
-        "program_1": "PROGRAMA DE CONFERENCIAS 2025"
+        "program_1": "PROGRAMA DE CONFERENCIAS 2025",
+        "register_finish": "El registro en linea ha finalizado, podras realizar tu registro en sitio, "
     },
     "register": {
         "button_register": "REGÍSTRATE AQUÍ",
         "title": "REGISTRO",
         "description": "Por favor revisa que tu información sea correcta",
+        "description_student": "El acceso gratuito para estudiantes solo es válido el 13 de noviembre a partir de las 15:00 hrs. a 17:00 hrs.",
         "info_personal": "INFORMACIÓN",
         "info_company": "EMPRESA",
         "survey": "ENCUESTA",
